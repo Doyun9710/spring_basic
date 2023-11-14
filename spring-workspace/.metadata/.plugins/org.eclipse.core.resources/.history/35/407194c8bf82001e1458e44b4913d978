@@ -1,0 +1,34 @@
+package com.exam.di05;
+
+import java.util.ArrayList;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+import org.springframework.core.io.FileSystemResource;
+
+public class MainEx03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		GenericXmlApplicationContext ctx 
+		= new GenericXmlApplicationContext( new FileSystemResource( "./src/com/exam/di05/context.xml" ) );
+
+		BoardMapTO mapTO = (BoardMapTO)ctx.getBean( "mapTO" );
+		for( String key : mapTO.getUserMaps().keySet() ) {
+			System.out.println( key );
+		}
+		for( String value : mapTO.getUserMaps().values() ) {
+			System.out.println( value );
+		}
+		for( String key : mapTO.getBoardMaps().keySet() ) {
+			System.out.println( key );
+		}
+		for( BoardTO to : mapTO.getUserMaps().values() ) {
+			System.out.print( to.getSeq() + "\t" );
+			System.out.println( to.getSubject() );
+		}
+		
+		ctx.close();
+	}
+
+}

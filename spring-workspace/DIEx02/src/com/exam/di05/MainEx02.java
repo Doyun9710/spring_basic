@@ -17,6 +17,10 @@ public class MainEx02 {
 		for( String user : listTO.getUserLists() ) {
 			System.out.println( user );
 		}
+		for( BoardTO to : listTO.getBoardLists() ) {
+			System.out.print( to.getSeq() + "\t" );
+			System.out.println( to.getSubject() );
+		}
 		
 		ctx.close();
 	}

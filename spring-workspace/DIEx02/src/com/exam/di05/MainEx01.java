@@ -6,8 +6,7 @@ public class MainEx01 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		// Bean Configuration File
+
 		ArrayList<String> userLists = new ArrayList();
 		userLists.add( "홍길동" );
 		userLists.add( "김철수" );

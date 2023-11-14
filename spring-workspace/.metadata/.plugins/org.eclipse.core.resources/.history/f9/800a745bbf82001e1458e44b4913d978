@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean id="to1" class="com.exam.di05.BoardTO">
+		<property name="seq" value="1" />
+		<property name="subject" value="Subject 1" />
+	</bean>
+	
+	<bean id="to2" class="com.exam.di05.BoardTO">
+		<property name="seq" value="2" />
+		<property name="subject" value="Subject 2" />
+	</bean>
+	
+	<bean id="listTO" class="com.exam.di05.BoardListTO" scope="prototype">
+		<property name="userLists">
+			<list>
+				<value>홍길동</value>
+				<value>김철수</value>
+			</list>
+		</property>
+		
+		<property name="boardLists">
+			<list>
+				<ref bean="to1" />
+				<ref bean="to2" />
+			</list>
+		</property>
+	</bean>
+	
+	<!-- MainEx03 -->
+	<bean id="mapTO" class="com.exam.di05.BoardMapTO" scope="prototype">
+		<property name="userMaps">
+			<map>
+				<entry key="key1">
+					<value>홍길동</value>
+				</entry>
+				<entry key="key2">
+					<value>김철수</value>
+				</entry>
+			</map>
+		</property>
+		
+		<property name="userMaps">
+			<map>
+				<entry key="key1">
+					<value>홍길동</value>
+				</entry>
+				<entry key="key2">
+					<value>김철수</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+</beans>

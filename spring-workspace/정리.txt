@@ -63,7 +63,15 @@ WriteAction : lombok - @AllArgsConstructor, execute()
 MainEx : Print Getter   
 
 (com.exam.di05)   
+context.xml : namespace p 설정   
+BoardListTO : ArrayList<String> userLists, ArrayList<BoardTO> boardLists;   
+BoardTO : lombok - Getter, Setter   
+WriteAction : lombok - @AllArgsConstructor, execute()   
+MainEx01 : ArrayList<TO> Setter and Getter   
+MainEx02 : MainEx01 + context.xml (Bean Configuration File)   
 
+BoardMapTO : HashMap<String, String> userMaps, HashMap<String, BoardTO> boardMaps   
+MainEx03 : HashMap + Bean Configuration File   
 
 
 <br>
