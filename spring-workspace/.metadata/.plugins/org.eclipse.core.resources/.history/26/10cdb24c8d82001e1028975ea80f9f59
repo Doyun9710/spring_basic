@@ -1,0 +1,11 @@
+package com.exam.di01;
+
+public class MainEx01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HelloBean1 hello1 = new HelloBean1();
+		hello1.sayHello( "홍길동" );
+	}
+
+}

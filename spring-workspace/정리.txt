@@ -1,0 +1,53 @@
+
+
+
+< DIEx01 >   
+(com.exam.di01)   
+HelloBean1, HelloBean2 : sayHello()   
+MainEx : 객체 생성 / 사용 / 소멸   
+
+(com.exam.di02)   
+Hello : Interface, 인터페이스, sayHello()   
+HelloBean1, HelloBean2 : implements Hello   
+MainEx : Hello hello = new HelloBean1(), HelloBean2()   
+
+(com.exam.di03)   
+context.xml :    
+HelloBean1, HelloBean2 : 생성자 추가   
+MainEx : GenericXmlApplicationContext - XML로부터 객체 설정 정보를 가져온다   
+
+(com.exam.di04)   
+context.xml :    
+Hello : Interface, 인터페이스, sayHello()   
+HelloBean1, HelloBean2 : implements Hello   
+MainEx : Hello hello = new HelloBean1(), HelloBean2()   
+
+(com.exam.di05)   
+context.xml : scope="singleton", scope="prototype"   
+HelloBean : sayHello()   
+MainEx : Singleton, Prototype   
+
+(com.exam.di06)   
+context.xml : <constructor-arg><value>매개변수 값</value></constructor-arg>   
+HelloBean : 생성자 매개변수 Override   
+MainEx : Singleton, Prototype   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

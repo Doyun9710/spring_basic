@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<!-- Default constructor 호출 -->
+	<bean name="hello1" class="com.exam.di06.HelloBean" scope="prototype" />
+
+	<bean name="hello2" class="com.exam.di06.HelloBean" scope="prototype">
+		<!--
+		<constructor-arg>
+			<value>김철수</value>
+		</constructor-arg>
+		-->
+		<constructor-arg value="김철수" />
+	</bean>
+
+	<bean name="hello3" class="com.exam.di06.HelloBean" scope="prototype">
+		<!--
+		<constructor-arg>
+			<value>길동</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>홍</value>
+		</constructor-arg>
+		-->
+		<!--
+		<constructor-arg value="길동" />
+		<constructor-arg value="홍" />
+		-->
+		<constructor-arg value="홍" index="1" />
+		<constructor-arg value="길동" index="0" />
+	</bean>
+</beans>

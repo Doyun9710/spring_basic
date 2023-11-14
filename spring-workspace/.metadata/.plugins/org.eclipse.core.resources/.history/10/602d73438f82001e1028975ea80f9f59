@@ -1,0 +1,12 @@
+package com.exam.di03;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class MainEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext( "classpath:com/exam/di03/context.xml" );
+	}
+
+}

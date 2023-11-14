@@ -1,0 +1,12 @@
+package com.exam.di05;
+
+public class HelloBean {
+	public HelloBean() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public void sayHello(String name) {
+		// TODO Auto-generated method stub
+		System.out.println( "Hello " + name );
+	}
+}

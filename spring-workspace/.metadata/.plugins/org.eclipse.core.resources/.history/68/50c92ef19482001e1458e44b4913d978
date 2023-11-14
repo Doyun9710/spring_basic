@@ -1,0 +1,29 @@
+package com.exam.di04;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+import org.springframework.core.io.FileSystemResource;
+
+public class MainEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// Error!
+		//GenericXmlApplicationContext ctx = new GenericXmlApplicationContext( "classpath:com/exam/di03/context.xml" );
+
+		FileSystemResource resource = new FileSystemResource( "C:\\Java\\spring-workspace\\DIEx01\\src\\com\\exam\\di03\\context.xml" );
+		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext( resource );
+		
+		// new(X)
+		HelloBean1 hello1 = (HelloBean1)ctx.getBean( "hello1" );
+		hello1.sayHello( "홍길동" );
+		
+		/*
+		HelloBean2 hello2 = (HelloBean2)ctx.getBean( "hello2" );
+		hello2.sayHello( "김철수" );
+		 */
+		
+		ctx.close();
+	}
+
+}

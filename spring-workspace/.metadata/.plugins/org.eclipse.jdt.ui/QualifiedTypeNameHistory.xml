@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.exam.di01.HelloBean1"/>
+    <fullyQualifiedTypeName name="com.exam.di01.HelloBean2"/>
+    <fullyQualifiedTypeName name="org.hibernate.engine.transaction.jta.platform.internal.SynchronizationRegistryBasedSynchronizationStrategy"/>
+    <fullyQualifiedTypeName name="com.exam.di02.HelloBean2"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.core.io.FileSystemResource"/>
+</qualifiedTypeNameHistroy>
