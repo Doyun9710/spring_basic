@@ -33,15 +33,40 @@ HelloBean : 생성자 매개변수 Override
 MainEx : Singleton, Prototype   
 
 
+<br>
+
+
+< DIEx02 >   
+(com.exam.di01)   
+context.xml : 사용자 설정 매개변수   
+BoardTO : 생성자()   
+WriteAction, ViewAction : execute()   
+MainEx : viewAction.execute()   
+
+(com.exam.di02)   
+context.xml : 사용자 설정 매개변수 TO   
+BoardTO : seq, subject, lombok - @AllArgsConstructor   
+ListAction : execute()   
+MainEx : listAction.execute()   
+
+(com.exam.di03)   
+Lombok Dependency - https://mvnrepository.com/artifact/org.projectlombok/lombok   
+context.xml : Setter 설정   
+BoardTO : lombok - Getter, Setter   
+WriteAction : lombok - @AllArgsConstructor, execute()   
+MainEx : Print Getter   
+
+(com.exam.di04)   
+context.xml : namespace p 설정   
+BoardTO : lombok - Getter, Setter   
+WriteAction : lombok - @AllArgsConstructor, execute()   
+MainEx : Print Getter   
+
+(com.exam.di05)   
 
 
 
-
-
-
-
-
-
+<br>
 
 
 

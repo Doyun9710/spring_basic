@@ -9,7 +9,8 @@ public class MainEx {
 		// TODO Auto-generated method stub
 		
 		GenericXmlApplicationContext ctx 
-		= new GenericXmlApplicationContext( new FileSystemResource( "C:/Java/spring-workspace/DIEx01/src/com/exam/di06/context.xml" ) );
+		//= new GenericXmlApplicationContext( new FileSystemResource( "C:/Java/spring-workspace/DIEx01/src/com/exam/di06/context.xml" ) );
+		= new GenericXmlApplicationContext( new FileSystemResource( "./src/com/exam/di06/context.xml" ) );
 
 		HelloBean hello1 = (HelloBean)ctx.getBean( "hello1" );
 		hello1.sayHello();

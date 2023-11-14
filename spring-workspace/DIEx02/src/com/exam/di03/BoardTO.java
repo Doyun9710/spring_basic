@@ -1,0 +1,30 @@
+package com.exam.di03;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class BoardTO {
+	private String seq;
+	private String subject;
+/*
+	public String getSeq() {
+		return seq;
+	}
+
+	public void setSeq(String seq) {
+		System.out.println( "setSeq(String seq) 호출" );
+		this.seq = seq;
+	}
+
+	public String getSubject() {
+		return subject;
+	}
+
+	public void setSubject(String subject) {
+		System.out.println( "setSubject(String subject) 호출" );
+		this.subject = subject;
+	}
+*/
+}

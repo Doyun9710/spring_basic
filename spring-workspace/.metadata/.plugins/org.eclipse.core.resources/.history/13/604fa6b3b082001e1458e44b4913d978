@@ -1,0 +1,13 @@
+package com.exam.di02;
+
+public class BoardTO {
+	private String seq;
+	private String subject;
+	
+	public BoardTO(String seq, String subject) {
+		super();
+		this.seq = seq;
+		this.subject = subject;
+	}
+	
+}

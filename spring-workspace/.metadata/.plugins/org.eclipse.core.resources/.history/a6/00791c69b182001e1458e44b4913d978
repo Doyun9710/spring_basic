@@ -1,0 +1,26 @@
+package com.exam.di02;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+import org.springframework.core.io.FileSystemResource;
+
+public class MainEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		GenericXmlApplicationContext ctx 
+		= new GenericXmlApplicationContext( new FileSystemResource( "./src/com/exam/di01/context.xml" ) );
+		/*
+		WriteAction writeAction1 = (WriteAction)ctx.getBean( "writeAction1" );
+		System.out.println( "wrtieAction1 : " + writeAction1 );
+		*/
+		WriteAction writeAction2 = (WriteAction)ctx.getBean( "writeAction2" );
+		System.out.println( "wrtieAction2 : " + writeAction2 );
+		
+		ViewAction viewAction = (ViewAction)ctx.getBean( "viewAction" );
+		System.out.println( "viewAction : " + viewAction );
+		viewAction.execute();
+		
+		ctx.close();
+	}
+
+}

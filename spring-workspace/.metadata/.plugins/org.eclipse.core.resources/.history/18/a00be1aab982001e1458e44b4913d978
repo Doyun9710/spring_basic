@@ -1,0 +1,12 @@
+package com.exam.di05;
+
+import java.util.ArrayList;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class BoardListTO {
+	private ArrayList<String> userList;
+}

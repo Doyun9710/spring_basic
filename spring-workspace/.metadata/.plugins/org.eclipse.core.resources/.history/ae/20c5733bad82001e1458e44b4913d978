@@ -1,0 +1,11 @@
+package com.exam.di01;
+
+public class WriteAction {
+	private BoardTO to;
+	
+	public WriteAction() {
+		// TODO Auto-generated constructor stub
+		System.out.println( "WriteAction() 생성자 호출" );
+		this.to = new BoardTO();
+	}
+}
