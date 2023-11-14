@@ -49,17 +49,17 @@ public class MainEx01 {
 		for( String key : userMaps.keySet() ) {
 			System.out.println( key );
 		}
-		for( String value : userMaps.values() ) {
+		for( String value : mapTO.getUserMaps().values() ) {
 			System.out.println( value );
 		}
 		
 		HashMap<String, BoardTO> boardMaps = new HashMap();
 		boardMaps.put( "key1", to1 );
 		boardMaps.put( "key2", to2 );
-		for( String key : boardMaps.keySet() ) {
+		for( String key : mapTO.getBoardMaps().keySet() ) {
 			System.out.println( key );
 		}
-		for( BoardTO to : boardMaps.values() ) {
+		for( BoardTO to : mapTO.getBoardMaps().values() ) {
 			System.out.print( to.getSeq() + "\t" );
 			System.out.println( to.getSubject() );
 		}

@@ -43,26 +43,7 @@ public class MainEx01 {
 		
 		
 		
-		HashMap<String, String> userMaps = new HashMap();
-		userMaps.put( "key1", "홍길동" );
-		userMaps.put( "key2", "김철수" );
-		for( String key : userMaps.keySet() ) {
-			System.out.println( key );
-		}
-		for( String value : userMaps.values() ) {
-			System.out.println( value );
-		}
-		
-		HashMap<String, BoardTO> boardMaps = new HashMap();
-		boardMaps.put( "key1", to1 );
-		boardMaps.put( "key2", to2 );
-		for( String key : boardMaps.keySet() ) {
-			System.out.println( key );
-		}
-		for( BoardTO to : boardMaps.values() ) {
-			System.out.print( to.getSeq() + "\t" );
-			System.out.println( to.getSubject() );
-		}
+		HashMap<String, BoardTO> 
 	}
 
 }
