@@ -7,7 +7,7 @@
 ### < DIEx01 >   
 (com.exam.di01)   
 HelloBean1, HelloBean2 : sayHello()   
-MainEx : 객체 생성 / 사용 / 소멸   
+MainEx : 객체 생성 / 사용 / 소멸    
 
 (com.exam.di02)   
 Hello : Interface, 인터페이스, sayHello()   
@@ -149,17 +149,25 @@ HelloBean1, HelloBean2 : Print Hello + name
 BeanConfig : @Import( { BeanConfig1.class, BeanConfig2.class } )   
 BeanConfig1, BeanConfig2 : @Bean HelloBean1, HelloBean2   
 
+(com.exam.di05)   
+MainEx :   
+(./model)   
+BoardDAO : Print Log   
+WriteAction : Print Log   
+(./config)   
+BeanConfig : @Autowired   
+
+
+
+
+
+
+
+
+
 
 
 
 
 <br>
-
-
-
-
-
-
-
-
 
