@@ -76,8 +76,16 @@ MainEx03 : HashMap + Bean Configuration File
 
 <br>
 
-
-
+(com.exam.di06)
+Maven - MariaDB 3.2.0 https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client/3.2.0
+com.exam.di06.model1
+	BoardDAO
+	BoardTO
+com.exam.di06.model2
+	Action
+	ListAction
+com.exam.di06
+	MainEx01
 
 
 
