@@ -4,7 +4,7 @@
 <br>
 
 
-< DIEx01 >   
+### < DIEx01 >   
 (com.exam.di01)   
 HelloBean1, HelloBean2 : sayHello()   
 MainEx : 객체 생성 / 사용 / 소멸   
@@ -39,7 +39,7 @@ MainEx : Singleton, Prototype
 <br>
 
 
-< DIEx02 >   
+### < DIEx02 >   
 (com.exam.di01)   
 context.xml : 사용자 설정 매개변수   
 BoardTO : 생성자()   
@@ -75,6 +75,82 @@ MainEx02 : MainEx01 + context.xml (Bean Configuration File)
 
 BoardMapTO : HashMap<String, String> userMaps, HashMap<String, BoardTO> boardMaps   
 MainEx03 : HashMap + Bean Configuration File   
+
+<br>
+
+(com.exam.di06)   
+Maven - MariaDB 3.2.0 https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client/3.2.0   
+com.exam.di06.model1   
+	BoardDAO   
+	BoardTO   
+com.exam.di06.model2   
+	Action   
+	ListAction : dao.boardLists()   
+com.exam.di06   
+	MainEx01 : 기본 JDBC   
+	MainEx02 : context.xml 사용   
+
+
+<br>
+
+
+### < DIEx03 >   
+(com.exam.di01)   
+MainEx01 : 다형성 호출   
+MainEx02 : Default scope : singleton   
+(./model1)   
+Hello : Interface   
+HelloBean1, HelloBean2 : print(name)   
+(./config)   
+BeanConfig : @Bean, 다형성 + Option(name, scope)   
+
+(com.exam.di02)   
+MainEx : new AnnotationConfigApplicationContext( BeanConfig.class )   
+(./model)   
+Hello : Interface   
+HelloBean : sayHello()   
+(./config)   
+BeanConfig : Annotation @Bean   
+
+(com.exam.di03)   
+MainEx : Annotation   
+(./model1)   
+BoardTO : seq, subject   
+WriteAction : 생성자()   
+(./config)   
+BeanConfig : @Bean WriteAction   
+
+(com.exam.di04)   
+DIEx02/src/com/exam/di06 + Annotation   
+(./model1)   
+BoardDAO : boardList2()   
+BoardTO : seq, subject, writer, mail, password, content, hit, wip, wdate, wgap   
+(./model2)   
+Action : Interface   
+ListAction : execute()   
+(./config)   
+BeanConfig : @Bean ListAction   
+
+(com.exam.lifecycle)   
+MainEx : Bean Lifecycle 빈 라이프사이클 https://blog.naver.com/edy5016/221280377077   
+(./model)   
+Action : Interface   
+WriteAction : implements Action, InitializingBean, DisposableBean, ApplicationContextAware, BeanNameAware, BeanClassLoaderAware, BeanFactoryAware   
+(./config)   
+BeanConfig : @Bean( initMethod = "init_method", destroyMethod = "destroy_method" )   
+CustomBeanPostProcessor : postProcessAfterInitialization(), postProcessBeforeInitialization()   
+
+(com.exam.di05)   
+MainEx : 다중 Config.class 가져오기   
+(./model)   
+Hello : Interface   
+HelloBean1, HelloBean2 : Print Hello + name   
+(./config)   
+BeanConfig : @Import( { BeanConfig1.class, BeanConfig2.class } )   
+BeanConfig1, BeanConfig2 : @Bean HelloBean1, HelloBean2   
+
+
+
 
 
 <br>
