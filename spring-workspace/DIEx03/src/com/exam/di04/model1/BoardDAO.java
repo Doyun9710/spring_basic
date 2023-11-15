@@ -1,4 +1,4 @@
-package com.exam.di06.model1;
+package com.exam.di04.model1;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -34,7 +34,7 @@ public class BoardDAO {
 		ArrayList<String> lists = new ArrayList<String>();
 		
 		try {
-			String sql = "select * from board1 limit 0, 5";
+			String sql = "select * from board1 limit 0, 3";
 			pstmt = conn.prepareStatement( sql );
 			
 			rs = pstmt.executeQuery();
@@ -65,7 +65,7 @@ public class BoardDAO {
 		
 		return lists;
 	}
-
+	
 	public ArrayList<BoardTO> boardList2() {
 		// TODO Auto-generated method stub
 		PreparedStatement pstmt = null;

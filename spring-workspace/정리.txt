@@ -1,7 +1,7 @@
 
 
 
-< DIEx01 >   
+### < DIEx01 >   
 (com.exam.di01)   
 HelloBean1, HelloBean2 : sayHello()   
 MainEx : 객체 생성 / 사용 / 소멸   
@@ -36,7 +36,7 @@ MainEx : Singleton, Prototype
 <br>
 
 
-< DIEx02 >   
+### < DIEx02 >   
 (com.exam.di01)   
 context.xml : 사용자 설정 매개변수   
 BoardTO : 생성자()   
@@ -73,19 +73,47 @@ MainEx02 : MainEx01 + context.xml (Bean Configuration File)
 BoardMapTO : HashMap<String, String> userMaps, HashMap<String, BoardTO> boardMaps   
 MainEx03 : HashMap + Bean Configuration File   
 
+<br>
+
+(com.exam.di06)   
+Maven - MariaDB 3.2.0 https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client/3.2.0   
+com.exam.di06.model1   
+	BoardDAO   
+	BoardTO   
+com.exam.di06.model2   
+	Action   
+	ListAction : dao.boardLists()   
+com.exam.di06   
+	MainEx01 : 기본 JDBC   
+	MainEx02 : context.xml 사용   
+
 
 <br>
 
-(com.exam.di06)
-Maven - MariaDB 3.2.0 https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client/3.2.0
-com.exam.di06.model1
-	BoardDAO
-	BoardTO
-com.exam.di06.model2
-	Action
-	ListAction
-com.exam.di06
-	MainEx01
+
+### < DIEx03 >   
+(com.exam.di01)   
+MainEx01 : 다형성 호출   
+MainEx02 : Default scope : singleton   
+(./model1)   
+Hello : Interface   
+HelloBean1, HelloBean2 : print(name)   
+(./config)   
+BeanConfig : @Bean, 다형성 + Option(name, scope)   
+
+(com.exam.di02)   
+
+
+(com.exam.di03)   
+DIEx02/src/com/exam/di06 + Annotation
+(./model1)
+BoardDAO : boardList2()
+BoardTO : seq, subject, writer, mail, password, content, hit, wip, wdate, wgap
+(./model2)
+Action : Interface
+ListAction : execute()
+(./config)
+BeanConfig : @Bean ListAction
 
 
 
