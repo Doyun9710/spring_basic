@@ -102,7 +102,12 @@ HelloBean1, HelloBean2 : print(name)
 BeanConfig : @Bean, 다형성 + Option(name, scope)   
 
 (com.exam.di02)   
-
+MainEx : new AnnotationConfigApplicationContext( BeanConfig.class )
+(./model)   
+Hello : Interface
+HelloBean : sayHello()
+(./config)   
+BeanConfig : Annotation @Bean
 
 (com.exam.di03)   
 DIEx02/src/com/exam/di06 + Annotation
@@ -115,7 +120,11 @@ ListAction : execute()
 (./config)
 BeanConfig : @Bean ListAction
 
-
+(com.exam.lifecycle)
+MainEx : Bean Lifecycle 빈 라이프사이클 https://blog.naver.com/edy5016/221280377077
+(./model)
+Action : Interface
+WriteAction : implements *
 
 
 
