@@ -3,7 +3,6 @@ package com.exam.di06;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.exam.di06.config.BeanConfig;
-//import com.exam.di06.model.BeanConfig;
 import com.exam.di06.model.WriteAction;
 
 public class MainEx {
@@ -16,6 +15,7 @@ public class MainEx {
 		//WriteAction writeAction1 = (WriteAction)ctx.getBean( "writeAction1" );
 		//WriteAction writeAction2 = (WriteAction)ctx.getBean( "writeAction2" );
 		WriteAction writeAction3 = (WriteAction)ctx.getBean( "writeAction3" );
+		writeAction3.getDAO();
 		
 		ctx.close();
 	}

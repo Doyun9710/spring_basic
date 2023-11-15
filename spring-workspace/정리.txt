@@ -149,16 +149,16 @@ HelloBean1, HelloBean2 : Print Hello + name
 BeanConfig : @Import( { BeanConfig1.class, BeanConfig2.class } )   
 BeanConfig1, BeanConfig2 : @Bean HelloBean1, HelloBean2   
 
-(com.exam.di05)   
-MainEx :   
+(com.exam.di06)   
+MainEx : call getDAO()
 (./model)   
 BoardDAO : Print Log   
-WriteAction : Print Log   
+WriteAction : @Autowired, getDAO()   
 (./config)   
-BeanConfig : @Autowired   
+BeanConfig : @Configuration   
 
-
-
+(com.exam.di06_fz)   
+실습코드   
 
 
 

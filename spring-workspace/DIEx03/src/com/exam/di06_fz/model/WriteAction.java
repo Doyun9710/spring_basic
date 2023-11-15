@@ -1,11 +1,9 @@
-package com.exam.di06.model;
+package com.exam.di06_fz.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class WriteAction {
-	
-	// 내부적 자동 인스턴스화
-	// Constructor / Property 주입
+
 	@Autowired
 	private BoardDAO dao;
 	
@@ -15,12 +13,8 @@ public class WriteAction {
 		System.out.println( "dao1 : " + dao );
 	}
 	
-	public void getDAO() {
+	public void getDao() {
 		System.out.println( "dao2 : " + dao );
 	}
-	/*
-	public WriteAction(BoardDAO dao) {
-		System.out.println( "WriteAction(BoardDAO dao) 생성자 호출" );
-	}
-	*/
+	
 }
