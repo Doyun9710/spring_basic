@@ -79,5 +79,14 @@ public class WriteAction implements Action, InitializingBean, DisposableBean, Ap
 			System.out.println( "writer 가 설정되었습니다." );
 		}
 	}
+	
+	// 사용자 메서드
+	public void init_method() {
+		System.out.println( "9. 빈의 사용자 초기화 메서드" );
+	}
+	
+	public void destroy_method() {
+		System.out.println( "12. 빈의 사용자 소멸 메서드" );
+	}
 
 }
