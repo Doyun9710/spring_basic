@@ -163,15 +163,42 @@ BeanConfig : @Configuration
 
 <br><br>
 
+
 ### < AOPEx01 >   
 (com.exam.aop01)   
 MainEx : getBean( "writeAction", Action.class ), execute() 전처리/후처리   
-**Context.xml : AOP 설정**   
-(com.exam.aop01.model)   
+**<span style="color:red">Context.xml : AOP 설정</span>**   
+(./model)   
 Action : Interface   
 WriteAction : constructor, setWriter(), execute()   
-(com.exam.aop01.advice)   
+(./advice)   
 BasicAdvice1, BasicAdvice2 : 전처리, 후처리 LOG   
+
+(com.exam.aop02)   
+AOPEx01/pom.xml : <dependency> AspectJ => com.exam.aop02.advice 의 implements 불필요   
+Context.xml : AOP 환경 설정
+(./model)   
+Action : Interface   
+WriteAction : constructor, execute()   
+(./advice)   
+BasicAdvice1, BasicAdvice2 : Print LOG   
+
+(com.exam.aop03)   
+MainEx : Call Action   
+Context.xml : Annotation 자동 검사 <aop:aspectj-autoproxy />   
+(./model)   
+Action : Interface   
+WriteAction : constructor, execute()   
+(./advice)   
+BasicAdvice1, BasicAdvice2 : Print LOG   
+
+
+
+
+
+
+
+
 
 
 
