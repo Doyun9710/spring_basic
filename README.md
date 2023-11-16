@@ -191,7 +191,9 @@ Action : Interface
 WriteAction : constructor, execute()   
 (./advice)   
 BasicAdvice1, BasicAdvice2 : Print LOG   
-
+BasicAdvice3 : 전처리, 후처리만 실행 @Before( "execution(* execute())" ), @After( "execution(* execute())" )   
+(./config)   
+BeanConfig : @Bean WriteAction   
 
 
 
