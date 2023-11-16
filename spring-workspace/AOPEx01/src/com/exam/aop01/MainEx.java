@@ -13,8 +13,8 @@ public class MainEx {
 		= new GenericXmlApplicationContext( new FileSystemResource( "./src/com/exam/aop01/context.xml" ) );
 		
 		//Action action = ctx.getBean( "writeAction", Action.class );
-		Action action = ctx.getBean( "proxy1", Action.class );
-		//Action action = ctx.getBean( "proxy2", Action.class );
+		//Action action = ctx.getBean( "proxy1", Action.class );
+		Action action = ctx.getBean( "proxy2", Action.class );
 		
 		// 전처리 -> AOP
 		action.execute();

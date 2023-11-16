@@ -14,7 +14,7 @@
 		<property name="pointcut">
 			<bean class="org.springframework.aop.support.JdkRegexpMethodPointcut">
 				<!-- <property name="pattern" value="com.exam.aop01.model.WriteAction.execute.*" /> -->
-				<property name="pattern" value=".*execute11.*" />
+				<property name="pattern" value=".*execute11" />
 			</bean>
 		</property>
 	</bean>
@@ -24,7 +24,7 @@
 		</property>
 		<property name="pointcut">
 			<bean class="org.springframework.aop.support.JdkRegexpMethodPointcut">
-				<property name="pattern" value=".*execute.*" />
+				<property name="pattern" value=".*execute12" />
 			</bean>
 		</property>
 	</bean>
