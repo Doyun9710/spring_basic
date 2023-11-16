@@ -161,10 +161,17 @@ BeanConfig : @Configuration
 실습코드   
 
 
+<br><br>
 
-
-
-
+### < AOPEx01 >   
+(com.exam.aop01)   
+MainEx : getBean( "writeAction", Action.class ), execute() 전처리/후처리   
+**<span style="color:red">Context.xml : AOP 설정</span>**   
+(com.exam.aop01.model)   
+Action : Interface   
+WriteAction : constructor, setWriter(), execute()   
+(com.exam.aop01.advice)   
+BasicAdvice1, BasicAdvice2 : 전처리, 후처리 LOG   
 
 
 
