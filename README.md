@@ -166,7 +166,7 @@ BeanConfig : @Configuration
 ### < AOPEx01 >   
 (com.exam.aop01)   
 MainEx : getBean( "writeAction", Action.class ), execute() 전처리/후처리   
-**<span style="color:red">Context.xml : AOP 설정</span>**   
+**Context.xml : AOP 설정**   
 (com.exam.aop01.model)   
 Action : Interface   
 WriteAction : constructor, setWriter(), execute()   
