@@ -1,7 +1,7 @@
 # spring_basic
 
 
-<br>
+<br><br>
 
 
 ### < DIEx01 >   
@@ -36,7 +36,7 @@ HelloBean : 생성자 매개변수 Override
 MainEx : Singleton, Prototype   
 
 
-<br>
+<br><br>
 
 
 ### < DIEx02 >   
@@ -91,7 +91,7 @@ com.exam.di06
 	MainEx02 : context.xml 사용   
 
 
-<br>
+<br><br>
 
 
 ### < DIEx03 >   
@@ -196,10 +196,62 @@ BasicAdvice3 : 전처리, 후처리만 실행 @Before( "execution(* execute())" 
 BeanConfig : @Bean WriteAction   
 
 
+<br><br>
 
 
+### < BoardModel2Ex >   
+URL 방식 Board Project   
 
 
+<br><br>
+
+
+### < WebEx01 >   
+** Spring MVC + URL 방식 Maven Project **   
+pom.xml : artifactId => mvc01   
+web.xml : Spring5 239p DispatcherServlet 설정   
+servlet-context.xml : <bean> *.do -> .jsp   
+
+index : href="./list1.do"   
+list1, list2 : Print Hello   
+
+
+<br><br>
+
+
+### < WebEx02 >   
+< WebEx01 > 복습, artifactId = mvc02   
+servlet-context.xml : property name="prefix", "suffix" 옵션   
+(com.exam.mvc.model)
+ListAction1, ListAction2 : return new ModelAndView( "listview1" );   
+
+
+<br><br>
+
+
+### < GugudanEx01 > & < GugudanModel2Ex02 >   
+http://localhost:8080/gugudan/gugudan.do	GugudanAction	/WEB-INF/views/gugudan.jsp(form)   
+http://localhost:8080/gugudan/gugudan_ok.do	GugudanOkAction	/WEB-INF/views/gugudan_ok.jsp(form)   
+
+GugudanOkAction : modelAndview.addObject( "result", sbHtml.toString() );   
+
+
+<br><br>
+
+
+### < ZipcodeEx01 >   
+추가 라이브러리   
+1. mariadb-java-client   
+2. lombok   
+
+우편번호 검색 프로젝트를 Spring MVC 로 변경하기   
+
+
+<br><br>
+
+
+### <BoardModel2Ex > -> < BoardEx01 > -> < BoardModel2Ex01 >   
+model2 구조의 프로젝트를 Spring MVC Project로 변경하기   
 
 
 
