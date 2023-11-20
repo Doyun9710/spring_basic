@@ -250,7 +250,7 @@ GugudanOkAction : modelAndview.addObject( "result", sbHtml.toString() );
 <br><br>
 
 
-### <BoardModel2Ex > -> < BoardEx01 > -> < BoardModel2Ex01 >   
+### < BoardModel2Ex > -> < BoardEx01 > -> < BoardModel2Ex01 >   
 model2 구조의 프로젝트를 Spring MVC Project로 변경하기   
 
 
