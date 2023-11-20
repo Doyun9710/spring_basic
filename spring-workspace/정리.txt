@@ -1,7 +1,7 @@
 # spring_basic
 
 
-<br>
+<br><br>
 
 
 ### < DIEx01 >   
@@ -36,7 +36,7 @@ HelloBean : 생성자 매개변수 Override
 MainEx : Singleton, Prototype   
 
 
-<br>
+<br><br>
 
 
 ### < DIEx02 >   
@@ -91,7 +91,7 @@ com.exam.di06
 	MainEx02 : context.xml 사용   
 
 
-<br>
+<br><br>
 
 
 ### < DIEx03 >   
@@ -193,9 +193,19 @@ WriteAction : constructor, execute()
 BasicAdvice1, BasicAdvice2 : Print LOG   
 BasicAdvice3 : 전처리, 후처리만 실행 @Before( "execution(* execute())" ), @After( "execution(* execute())" )   
 (./config)   
-BeanConfig : 
+BeanConfig : @Bean WriteAction   
 
 
+<br><br>
+
+
+### < BoardModel2Ex >   
+pom.xml : artifactId => mvc01   
+web.xml : Spring5 239p DispatcherServlet 설정   
+servlet-context.xml : <bean> *.do -> .jsp   
+
+index : href="./list1.do"   
+list1, list2 : Print Hello   
 
 
 
