@@ -11,8 +11,7 @@ public class GugudanAction implements Controller {
 	@Override
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		// TODO Auto-generated method stub
-		
-		System.out.println( "GugudanAction handleRequest() 호출");
+		System.out.println( "GugudanAction handleRequest() 호출" );
 		
 		return new ModelAndView( "gugudan" );
 	}

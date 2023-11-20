@@ -8,5 +8,15 @@
 </head>
 <body>
 gugudan.jsp
+
+<br /><br />
+
+<form action='./gugudan_ok.do' method='post'>
+시작단 : <input type='text' name='startdan' />
+- 
+끝단 : <input type='text' name='enddan' />
+&nbsp;&nbsp;<input type='submit' value='구구단 출력' />
+</form>
+
 </body>
 </html>

@@ -3,13 +3,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 	
-  	<bean name="/gugudan.do" class="com.exam.mvc.model.GugudanAction" />
-  	<bean name="/gugudan_ok.do" class="com.exam.mvc.model.GugudanOkAction" />
-  	
-  	<!-- 
-  	<bean name="/gugudan.do" class="com.exam.gugudan.model.GugudanAction" />
-  	<bean name="/gugudan_ok.do" class="com.exam.gugudan.model.GugudanOkAction" />
-  	 -->
+  	<bean name="/zipcode.do" class="com.exam.mvc.controller.ZipcodeAction" />
+  	<bean name="/zipcode_ok.do" class="com.exam.mvc.controller.ZipcodeOkAction" />
   	
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/" />

@@ -229,9 +229,23 @@ ListAction1, ListAction2 : return new ModelAndView( "listview1" );
 <br><br>
 
 
-### < GugudanModel2Ex02 >   
+### < GugudanEx01 > & < GugudanModel2Ex02 >   
 http://localhost:8080/gugudan/gugudan.do	GugudanAction	/WEB-INF/views/gugudan.jsp(form)   
 http://localhost:8080/gugudan/gugudan_ok.do	GugudanOkAction	/WEB-INF/views/gugudan_ok.jsp(form)   
+
+GugudanOkAction : modelAndview.addObject( "result", sbHtml.toString() );   
+
+
+<br><br>
+
+
+### < ZipcodeEx01 >   
+추가 라이브러리
+1. mariadb-java-client
+2. lombok
+
+
+
 
 
 
