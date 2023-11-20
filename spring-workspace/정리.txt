@@ -200,6 +200,14 @@ BeanConfig : @Bean WriteAction
 
 
 ### < BoardModel2Ex >   
+URL 방식 Board Project   
+
+
+<br><br>
+
+
+### < WebEx01 >   
+** Spring MVC + URL 방식 Maven Project **   
 pom.xml : artifactId => mvc01   
 web.xml : Spring5 239p DispatcherServlet 설정   
 servlet-context.xml : <bean> *.do -> .jsp   
@@ -207,6 +215,12 @@ servlet-context.xml : <bean> *.do -> .jsp
 index : href="./list1.do"   
 list1, list2 : Print Hello   
 
+
+<br><br>
+
+
+### < WebEx02 >   
+< WebEx01 > 복습, artifactId = mvc02   
 
 
 
