@@ -240,14 +240,18 @@ GugudanOkAction : modelAndview.addObject( "result", sbHtml.toString() );
 
 
 ### < ZipcodeEx01 >   
-추가 라이브러리
-1. mariadb-java-client
-2. lombok
+추가 라이브러리   
+1. mariadb-java-client   
+2. lombok   
+
+우편번호 검색 프로젝트를 Spring MVC 로 변경하기   
 
 
+<br><br>
 
 
-
+### <BoardModel2Ex > -> < BoardEx01 > -> < BoardModel2Ex01 >   
+model2 구조의 프로젝트를 Spring MVC Project로 변경하기   
 
 
 
