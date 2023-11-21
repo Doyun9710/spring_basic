@@ -299,10 +299,24 @@ web.xml : ConfigServlet 등록, <param-name>contextClass</param-name>
 ### < BoardModel2Ex02 >   
 < BoardModel2Ex01 > + Annotation Spring MVC   
 (com.exam.mvc.controller)   
-BoardController : return "String", /*return ModelAndView*/   
+BoardController :   
+ - 가상 디렉토리 생성 @RequestMapping( "/board" ) => http://localhost:8080/BoardModel2Ex02/list.do -> http://localhost:8080/BoardModel2Ex02/board/list.do   
+ - return "String", /*return ModelAndView*/   
 
 
+<br><br>
 
+
+### < WebEx022 >   
+공유 데이터 설정   
+(com.exam.mvc.share)   
+ShareClass : private String shareData1;, Getter/Setter   
+
+root-context.xml : name=shareClass -> ShareClass 등록   
+web.xml : contextConfigLocation, ContextLoaderListener 추가   
+
+ListAction1, 2 : private ShareClass shareClass;   
+servlet-context.xml : <property name="shareClass" ref="shareClass" />   
 
 
 
