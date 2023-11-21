@@ -288,9 +288,23 @@ ConfigController : Controller 방법 1 ~ 6
 < WebEx04 > 응용   
 (com.exam.mvc.controller)   
 ZipcodeController : ZipcodeAction + ZipcodeOkAction   
-ConfigServlet : servlet-context.xml -> Annotation 방식
+ConfigServlet : servlet-context.xml -> Annotation 방식   
 
-web.xml : ConfigServlet 등록, <param-name>contextClass</param-name>
+web.xml : ConfigServlet 등록, <param-name>contextClass</param-name>   
+
+
+<br><br>
+
+
+### < BoardModel2Ex02 >   
+< BoardModel2Ex01 > + Annotation Spring MVC
+(com.exam.mvc.controller)
+BoardController : return ModelAndView
+BoardController2 : return "String"
+
+
+
+
 
 
 <br>
