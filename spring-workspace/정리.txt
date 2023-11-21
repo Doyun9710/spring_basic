@@ -270,7 +270,15 @@ ConfigController : @Controller, @RequestMapping
 ### < WebEx04 >   
 servlet-context.xml : xmlns:context, Controller 파일 자동 스캔   
 (com.exam.mvc.controller)   
-ConfigController : @Controller, @RequestMapping   
+ConfigController : GET, POST 별 개별 호출 함수 설정   
+
+
+<br><br>
+
+
+### < WebEx04 >   
+(com.exam.mvc.controller)
+ConfigController : Controller 방법 1 ~ 6
 
 
 
