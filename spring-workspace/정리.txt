@@ -297,10 +297,9 @@ web.xml : ConfigServlet 등록, <param-name>contextClass</param-name>
 
 
 ### < BoardModel2Ex02 >   
-< BoardModel2Ex01 > + Annotation Spring MVC
-(com.exam.mvc.controller)
-BoardController : return ModelAndView
-BoardController2 : return "String"
+< BoardModel2Ex01 > + Annotation Spring MVC   
+(com.exam.mvc.controller)   
+BoardController : return "String", /*return ModelAndView*/   
 
 
 

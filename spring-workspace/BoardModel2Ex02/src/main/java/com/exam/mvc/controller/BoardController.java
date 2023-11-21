@@ -19,6 +19,8 @@ import com.exam.mvc.model.BoardTO;
 
 @Controller
 public class BoardController {
+	
+	// 새로운 Controller File 생성 시 ERROR
 
 	// return String Type
 	@RequestMapping( "/list.do" )
