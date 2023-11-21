@@ -293,7 +293,13 @@ ConfigServlet : servlet-context.xml -> Annotation 방식
 web.xml : ConfigServlet 등록, <param-name>contextClass</param-name>   
 
 
+<br><br>
 
+
+### < BoardModel2Ex02 >   
+< BoardModel2Ex01 > + Annotation Spring MVC   
+(com.exam.mvc.controller)   
+BoardController : return "String", /*return ModelAndView*/   
 
 
 
