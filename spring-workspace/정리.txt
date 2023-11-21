@@ -308,15 +308,15 @@ BoardController :
 
 
 ### < WebEx022 >   
-공유 데이터   
-(com.exam.mvc.share)
-ShareClass : private String shareData1;, Getter/Setter
+공유 데이터 설정   
+(com.exam.mvc.share)   
+ShareClass : private String shareData1;, Getter/Setter   
 
 root-context.xml : name=shareClass -> ShareClass 등록   
 web.xml : contextConfigLocation, ContextLoaderListener 추가   
 
-ListAction1, 2 : private ShareClass shareClass;
-servlet-context.xml : <property name="shareClass" ref="shareClass" />
+ListAction1, 2 : private ShareClass shareClass;   
+servlet-context.xml : <property name="shareClass" ref="shareClass" />   
 
 
 
