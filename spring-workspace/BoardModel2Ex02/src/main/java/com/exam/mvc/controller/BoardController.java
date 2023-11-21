@@ -18,9 +18,11 @@ import com.exam.mvc.model.BoardDAO;
 import com.exam.mvc.model.BoardTO;
 
 @Controller
+@RequestMapping( "/board" )
 public class BoardController {
 	
 	// 새로운 Controller File 생성 시 ERROR
+	// @RequestMapping( "/board" ) : URL 가상 디렉토리 생성 -> 참조 파일 위치 재조정
 
 	// return String Type
 	@RequestMapping( "/list.do" )
