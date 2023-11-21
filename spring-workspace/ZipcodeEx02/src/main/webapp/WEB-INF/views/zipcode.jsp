@@ -12,7 +12,7 @@
 zipcode.jsp
 <br /><br />
 
-<form action="./zipcode_ok.do" method="post">
+<form action="./zipcode_ok.do" method="POST">
 동이름 <input type="text" name="strdong" />
 <input type="submit" value="우편번호 검색" />
 </form>

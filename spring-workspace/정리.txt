@@ -277,9 +277,20 @@ ConfigController : GET, POST 별 개별 호출 함수 설정
 
 
 ### < WebEx04 >   
-(com.exam.mvc.controller)
-ConfigController : Controller 방법 1 ~ 6
+(com.exam.mvc.controller)   
+ConfigController : Controller 방법 1 ~ 6   
 
+
+<br><br>
+
+
+### < ZipcodeEx02 >   
+< WebEx04 > 응용   
+(com.exam.mvc.controller)   
+ZipcodeController : ZipcodeAction + ZipcodeOkAction   
+ConfigServlet : servlet-context.xml -> Annotation 방식
+
+web.xml : ConfigServlet 등록, <param-name>contextClass</param-name>
 
 
 <br>
