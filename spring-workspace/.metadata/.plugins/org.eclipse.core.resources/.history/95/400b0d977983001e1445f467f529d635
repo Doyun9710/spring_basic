@@ -1,0 +1,73 @@
+package com.exam.lifecycle.model;
+
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanClassLoaderAware;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.BeanFactoryAware;
+import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+
+public class WriteAction implements Action, InitializingBean, DisposableBean, ApplicationContextAware, BeanNameAware, BeanClassLoaderAware, BeanFactoryAware {
+	private String writer;
+	
+	// life cycle 진행상황 보기
+	private String beanName;
+	private BeanFactory beanFactory;
+	
+	public WriteAction() {
+		// TODO Auto-generated constructor stub
+		System.out.println( "1. 빈의 생성자 실행" );
+	}
+	
+	public void setWriter(String writer) {
+		System.out.println( "2. setWriter(String writer) 실행" );
+		this.writer = writer;
+	}
+
+	@Override
+	public void execute() {
+		// TODO Auto-generated method stub
+		System.out.println( "*. execute() 실행" );
+		System.out.println( "writer : " + writer );
+	}
+
+	@Override
+	public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
+		// TODO Auto-generated method stub
+		System.out.println( "5. setBeanFactory(BeanFactory beanFactory) 실행 : 빈 팩토리 설정(빈 생산 공장)" );
+	}
+
+	@Override
+	public void setBeanClassLoader(ClassLoader classLoader) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setBeanName(String name) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void destroy() throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

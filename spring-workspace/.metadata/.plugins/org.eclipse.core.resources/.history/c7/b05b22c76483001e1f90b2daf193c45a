@@ -1,0 +1,22 @@
+package com.exam.di04.config;
+
+import org.springframework.context.annotation.Bean;
+
+import com.exam.di04.model1.BoardTO;
+import com.exam.di04.model2.ListAction;
+
+public class BeanConfig {
+	
+	//@Bean
+	public BoardTO boardTO() {
+		// property
+		BoardTO to = new BoardTO();
+		return to;
+	}
+	
+	@Bean
+	public ListAction listAction() {
+		return new ListAction( dao );
+	}
+	
+}

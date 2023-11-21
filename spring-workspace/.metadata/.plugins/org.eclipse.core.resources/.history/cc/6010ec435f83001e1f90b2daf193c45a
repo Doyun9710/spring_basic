@@ -1,0 +1,13 @@
+package com.exam.di02;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class BoardTO {
+	public BoardTO() {
+		// TODO Auto-generated constructor stub
+		System.out.println( "BoardTO() 호출" );
+	}
+}

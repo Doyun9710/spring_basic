@@ -1,0 +1,10 @@
+package com.exam.aop01;
+
+public class MainEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

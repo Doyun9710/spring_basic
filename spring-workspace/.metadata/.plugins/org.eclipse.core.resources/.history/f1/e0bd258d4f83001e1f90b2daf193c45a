@@ -1,0 +1,5 @@
+package com.exam.di06.model1;
+
+public class BoardDAO {
+
+}

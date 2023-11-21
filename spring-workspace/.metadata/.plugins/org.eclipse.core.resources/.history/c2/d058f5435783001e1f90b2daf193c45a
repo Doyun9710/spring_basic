@@ -1,0 +1,20 @@
+package com.exam.di01.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.exam.di01.model1.HelloBean1;
+
+@Configuration
+public class BeanConfig {
+	
+	@Bean
+	public HelloBean1 helloBean1() {
+		return new HelloBean1();
+	}
+	
+	@Bean
+	public HelloBean2 helloBean2() {
+		return new HelloBean2();
+	}
+}

@@ -1,0 +1,17 @@
+package com.exam.lifecycle.model;
+
+public class Write implements Action {
+	private String writer;
+	
+	public Write() {
+		// TODO Auto-generated constructor stub
+		System.out.println( "1. 빈의 생성자 실행" );
+	}
+
+	@Override
+	public void execute() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

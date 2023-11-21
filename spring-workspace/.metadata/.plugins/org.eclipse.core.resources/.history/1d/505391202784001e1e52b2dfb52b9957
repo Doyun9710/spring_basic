@@ -1,0 +1,8 @@
+package com.exam.aop02.model;
+
+public interface Action {
+	void execute();
+	
+	void execute11();
+	void execute12();
+}

@@ -1,0 +1,11 @@
+package com.exam.di01.model1;
+
+public class HelloBean implements Hello {
+
+	@Override
+	public void sayHello(String name) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

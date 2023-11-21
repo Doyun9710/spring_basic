@@ -1,0 +1,20 @@
+package com.exam.di05.model;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class WriteAction {
+
+	@Autowired
+	private BoardDAO dao;
+	
+	public WriteAction() {
+		// TODO Auto-generated constructor stub
+		System.out.println( "WriteAction() 생성자 호출" );
+		System.out.println( "dao1 : " + dao );
+	}
+	
+	public void getDao() {
+		System.out.println( "dao2 : " + dao );
+	}
+	
+}

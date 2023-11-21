@@ -1,0 +1,22 @@
+package com.exam.di06;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.exam.di06.config.BeanConfig;
+import com.exam.di06.model.WriteAction;
+
+public class MainEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		AnnotationConfigApplicationContext ctx 
+		= new AnnotationConfigApplicationContext( BeanConfig.class );
+		
+		//WriteAction writeAction1 = (WriteAction)ctx.getBean( "writeAction1" );
+		//WriteAction writeAction2 = (WriteAction)ctx.getBean( "writeAction2" );
+		WriteAction writeAction3 = (WriteAction)ctx.getBean( "writeAction3" );
+		
+		ctx.close();
+	}
+
+}

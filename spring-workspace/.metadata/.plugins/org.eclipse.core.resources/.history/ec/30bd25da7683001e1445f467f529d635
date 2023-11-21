@@ -1,0 +1,14 @@
+package com.exam.lifecycle.model;
+
+public class Write implements Action {
+	private String writer;
+	
+	
+
+	@Override
+	public void execute() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,8 @@
+package com.exam.aop03.advice;
+
+import org.aspectj.lang.annotation.Aspect;
+
+@Aspect
+public class BasicAdvice1 {
+
+}

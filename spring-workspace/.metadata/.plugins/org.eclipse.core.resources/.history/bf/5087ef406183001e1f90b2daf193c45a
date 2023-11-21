@@ -1,0 +1,11 @@
+package com.exam.di03.model1;
+
+public class BoardTO {
+	public BoardTO() {
+		private String seq;
+		private String subject;
+		
+		// TODO Auto-generated constructor stub
+		System.out.println( "BoardTO() 호출" );
+	}
+}

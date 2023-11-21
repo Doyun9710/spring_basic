@@ -1,0 +1,23 @@
+package com.exam.lifecycle;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.exam.lifecycle.config.BeanConfig;
+import com.exam.lifecycle.model.WriteAction;
+
+public class MainEx02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		AnnotationConfigApplicationContext ctx 
+		= new AnnotationConfigApplicationContext( BeanConfig.class );
+
+		WriteAction writeAction = (WriteAction)ctx.getBean( "writeAction" );
+		writeAction.execute();
+		
+		ctx.removeBeanDefinition( "writeAction" );
+		
+		ctx.close();
+	}
+
+}

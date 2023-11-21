@@ -1,0 +1,5 @@
+package com.exam.di05.config;
+
+public class BeanConfig {
+
+}

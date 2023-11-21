@@ -1,0 +1,30 @@
+package com.exam.aop03;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+import org.springframework.core.io.FileSystemResource;
+
+import com.exam.aop03.model.Action;
+import com.exam.aop03.config.BeanConfig;
+import com.exam.aop03.model.WriteAction;
+
+public class MainEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*
+		GenericXmlApplicationContext ctx 
+		= new GenericXmlApplicationContext( new FileSystemResource( "./src/com/exam/aop03/context.xml" ) );
+
+		
+		*/
+		AnnotationConfigApplicationContext ctx 
+		= new AnnotationConfigApplicationContext( BeanConfig.class );
+		
+		Action action = ctx.getBean( "writeAction", Action.class );
+		action.execute();
+		
+		ctx.close();
+	}
+
+}

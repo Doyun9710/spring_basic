@@ -1,0 +1,16 @@
+package com.exam.lifecycle.config;
+
+import org.springframework.context.annotation.Bean;
+
+import com.exam.lifecycle.model.Action;
+import com.exam.lifecycle.model.WriteAction;
+
+public class BeanConfig {
+	
+	@Bean( initMethod = "init_method", destroyMethod = "destroy_method" )
+	public Action action() {
+		WriteAction writeAction = new WriteAction();
+		writeAction.setWriter( "홍길동" );
+		return writeAction;
+	}
+}

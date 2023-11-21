@@ -1,0 +1,11 @@
+package com.exam.di06.model1;
+
+import java.sql.Connection;
+
+public class BoardDAO {
+	private Connection conn;
+	
+	public BoardDAO() {
+		
+	}
+}

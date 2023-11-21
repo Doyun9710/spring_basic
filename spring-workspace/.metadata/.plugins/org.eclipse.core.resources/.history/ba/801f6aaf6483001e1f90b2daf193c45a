@@ -1,0 +1,33 @@
+package com.exam.di04.config;
+
+import org.springframework.context.annotation.Bean;
+
+import com.exam.di04.model1.BoardTO;
+import com.exam.di04.model2.ListAction;
+
+public class BeanConfig {
+	
+	//@Bean
+	public BoardTO boardTO() {
+		// property
+		BoardTO to = new BoardTO();
+		to.setSeq( "1" );
+		to.setSubject( "Subject 1" );
+		return to;
+	}
+	
+	@Bean
+	public ListAction listAction() {
+		/*
+		// 1
+		return new WriteAction( new BoardTO() );
+		
+		// 2
+		BoardTO to = new BoardTO();
+		return new WriteAction( to );
+		*/
+		// 3
+		return new ListAction( boardTO() );
+	}
+	
+}

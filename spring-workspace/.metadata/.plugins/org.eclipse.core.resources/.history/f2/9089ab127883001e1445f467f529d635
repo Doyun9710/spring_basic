@@ -1,0 +1,22 @@
+package com.exam.lifecycle;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+import org.springframework.core.io.FileSystemResource;
+
+import com.exam.di04.model2.Action;
+
+public class MainEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		GenericXmlApplicationContext ctx 
+		= new GenericXmlApplicationContext( new FileSystemResource() );
+		
+		Action action = ctx.getBean( "writeAction", Action.class );
+		action.execute();
+		
+		ctx.close();
+	}
+
+}

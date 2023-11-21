@@ -1,0 +1,7 @@
+package com.exam.mvc.test;
+
+public class Snippet {
+	
+	<bean name="/list1.do" class="com.exam.mvc.controller.ListAction" />
+}
+

@@ -1,0 +1,24 @@
+package com.exam.di02;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Bean;
+
+import com.exam.di01.config.BeanConfig;
+import com.exam.di01.model.Hello;
+import com.exam.di01.model.HelloBean1;
+import com.exam.di01.model.HelloBean2;
+
+public class MainEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		AnnotationConfigApplicationContext ctx 
+		= new AnnotationConfigApplicationContext( BeanConfig.class );
+		
+		
+		
+		ctx.close();
+	}
+
+}

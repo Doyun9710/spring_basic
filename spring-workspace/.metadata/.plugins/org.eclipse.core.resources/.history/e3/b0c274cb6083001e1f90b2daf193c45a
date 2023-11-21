@@ -1,0 +1,19 @@
+package com.exam.di03.config;
+
+import org.springframework.context.annotation.Bean;
+
+import com.exam.di02.model.HelloBean;
+
+public class BeanConfig {
+	
+	@Bean
+	public WriteAction writeAction() {
+		// 1
+		return new WriteAction( new BoardTO() );
+		
+		// 2
+		BoardTO to = new BoardTO();
+		return new WriteAction( to );
+	}
+	
+}

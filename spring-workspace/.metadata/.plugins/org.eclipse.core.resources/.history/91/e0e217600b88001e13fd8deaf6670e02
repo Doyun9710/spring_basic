@@ -1,0 +1,15 @@
+package com.exam.mvc.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class ConfigController {
+
+	@RequestMapping( "/list1.do" )
+	public String handleRequest1() {
+		
+		
+		return "listview1";
+	}
+}

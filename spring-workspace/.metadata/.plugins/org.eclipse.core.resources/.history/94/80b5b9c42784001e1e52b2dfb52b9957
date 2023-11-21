@@ -1,0 +1,5 @@
+package com.exam.aop02.advice;
+
+public class BasicAdvice1 {
+	
+}

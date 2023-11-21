@@ -1,0 +1,16 @@
+package com.exam.di01;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.exam.di01.config.BeanConfig;
+
+public class MainEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		AnnotationConfigApplicationContext ctx 
+		= new AnnotationConfigApplicationContext( BeanConfig.class );
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.exam.mvc.model;
+
+public class ZipcodeDAO {
+	
+	public ZipcodeDAO() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public ArrayList<ZipcodeTO> zipcodeList(String strdong) {
+		
+	}
+}

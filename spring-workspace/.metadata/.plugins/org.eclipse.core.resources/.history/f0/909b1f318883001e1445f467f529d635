@@ -1,0 +1,13 @@
+package com.exam.di06.config;
+
+import org.springframework.context.annotation.Bean;
+
+import com.exam.di06.model.WriteAction;
+
+public class BeanConfig {
+	
+	@Bean
+	public WriteAction writeAction() {
+		return new WriteAction();
+	}
+}

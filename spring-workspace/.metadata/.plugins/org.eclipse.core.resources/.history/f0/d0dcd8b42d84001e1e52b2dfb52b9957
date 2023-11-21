@@ -1,0 +1,12 @@
+package com.exam.aop03.advice;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+
+@Aspect
+public class BasicAdvice1 {
+
+	public Object logAround( ProceedingJoinPoint joinPoint ) throws Throwable {
+		
+	}
+}

@@ -1,0 +1,5 @@
+package com.exam.di01.model1;
+
+public interface Hello {
+
+}

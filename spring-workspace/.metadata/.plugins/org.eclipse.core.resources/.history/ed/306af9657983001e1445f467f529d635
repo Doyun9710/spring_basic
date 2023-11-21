@@ -1,0 +1,30 @@
+package com.exam.lifecycle.model;
+
+import org.springframework.beans.factory.BeanClassLoaderAware;
+import org.springframework.beans.factory.BeanFactoryAware;
+import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.context.ApplicationContextAware;
+
+public class WriteAction implements Action, InitializingBean, DisposableBean, ApplicationContextAware, BeanNameAware, BeanClassLoaderAware, BeanFactoryAware {
+	private String writer;
+	
+	public WriteAction() {
+		// TODO Auto-generated constructor stub
+		System.out.println( "1. 빈의 생성자 실행" );
+	}
+	
+	public void setWriter(String writer) {
+		System.out.println( "2. setWriter(String writer) 실행" );
+		this.writer = writer;
+	}
+
+	@Override
+	public void execute() {
+		// TODO Auto-generated method stub
+		System.out.println( "*. execute() 실행" );
+		System.out.println( "writer : " + writer );
+	}
+
+}

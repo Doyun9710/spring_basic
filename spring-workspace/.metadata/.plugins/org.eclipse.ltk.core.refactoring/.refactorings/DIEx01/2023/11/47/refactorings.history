@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;context.xml&apos; to &apos;WEB-INF&apos;&#x0D;&#x0A;- Original project: &apos;DIEx01&apos;&#x0D;&#x0A;- Destination element: &apos;WEB-INF&apos;&#x0D;&#x0A;- Original element: &apos;context.xml&apos;" description="Copy file" element1="src/com/exam/di04/context.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1700444050702" target="/WebEx01/src/main/webapp/WEB-INF" units="0" version="1.0"/>
+</session>

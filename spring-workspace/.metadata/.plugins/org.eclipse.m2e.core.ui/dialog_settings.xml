@@ -3,10 +3,18 @@
 	<section name="wizardPage">
 		<list key="groupId">
 			<item value="com.exam"/>
+			<item value="BoardModel2Ex"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="BoardModel2Ex01"/>
+			<item value="zipcode01"/>
+			<item value="gugudan"/>
+			<item value="mvc02"/>
+			<item value="mvc"/>
+			<item value="BoardModel2Ex"/>
+			<item value="aop"/>
 			<item value="di"/>
 			<item value="DIEx01"/>
 		</list>

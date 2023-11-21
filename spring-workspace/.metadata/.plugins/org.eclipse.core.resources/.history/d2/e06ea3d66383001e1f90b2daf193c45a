@@ -1,0 +1,21 @@
+package com.exam.di06;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+import org.springframework.core.io.FileSystemResource;
+
+import com.exam.di06.model2.Action;
+
+public class MainEx02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		GenericXmlApplicationContext ctx 
+		= new GenericXmlApplicationContext( new FileSystemResource( "./src/com/exam/di06/context.xml" ) );
+		
+		Action action = (Action)ctx.getBean( "listAction" );
+		action.execute();
+		
+		ctx.close();
+	}
+
+}

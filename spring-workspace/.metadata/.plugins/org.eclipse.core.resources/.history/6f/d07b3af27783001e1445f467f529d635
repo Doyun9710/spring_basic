@@ -1,0 +1,15 @@
+package com.exam.lifecycle;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+import org.springframework.core.io.FileSystemResource;
+
+public class MainEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		GenericXmlApplicationContext ctx 
+		= new GenericXmlApplicationContext( new FileSystemResource() );
+	}
+
+}

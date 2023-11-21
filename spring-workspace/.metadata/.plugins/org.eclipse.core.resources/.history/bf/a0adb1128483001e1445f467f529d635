@@ -1,0 +1,20 @@
+package com.exam.di05;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.exam.di05.config.BeanConfig1;
+import com.exam.di05.config.BeanConfig2;
+
+public class MainEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		AnnotationConfigApplicationContext ctx 
+		= new AnnotationConfigApplicationContext( BeanConfig1.class, BeanConfig2.class );
+		
+		
+		
+		ctx.close();
+	}
+
+}

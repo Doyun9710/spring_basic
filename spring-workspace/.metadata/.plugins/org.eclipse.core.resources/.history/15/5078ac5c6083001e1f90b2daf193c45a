@@ -1,0 +1,13 @@
+package com.exam.di02;
+
+import org.springframework.context.annotation.Bean;
+
+public class WriteAction {
+	
+	@Bean
+	public WriteAction writeAction() {
+		// TODO Auto-generated constructor stub
+		return new WriteAction( new BoardTO() );
+	}
+	
+}

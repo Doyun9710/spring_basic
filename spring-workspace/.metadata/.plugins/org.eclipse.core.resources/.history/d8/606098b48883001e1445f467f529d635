@@ -1,0 +1,26 @@
+package com.exam.di06.config;
+
+import org.springframework.context.annotation.Bean;
+
+import com.exam.di06.model.BoardDAO;
+import com.exam.di06.model.WriteAction;
+
+public class BeanConfig {
+	
+	private BoardDAO dao;
+	
+	@Bean
+	public WriteAction writeAction1() {
+		return new WriteAction();
+	}
+	
+	@Bean
+	public WriteAction writeAction2() {
+		return new WriteAction( new BoardDAO() );
+	}
+	
+	@Bean
+	public WriteAction writeAction3() {
+		return new WriteAction( new BoardDAO() );
+	}
+}

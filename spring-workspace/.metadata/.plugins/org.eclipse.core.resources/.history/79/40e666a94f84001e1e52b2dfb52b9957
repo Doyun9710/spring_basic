@@ -1,0 +1,9 @@
+package com.exam.aop03.config;
+
+import org.springframework.context.annotation.Bean;
+
+public class BeanConfig {
+	
+	@Bean
+	
+}

@@ -1,0 +1,22 @@
+package com.exam.aop03.config;
+
+import org.springframework.context.annotation.Bean;
+
+import com.exam.aop03.model.WriteAction;
+
+public class BeanConfig {
+	
+	@Bean
+	public WriteAction writeAction() {
+		/*
+		// 1
+		return new WriteAction( new BoardTO() );
+		
+		// 2
+		BoardTO to = new BoardTO();
+		return new WriteAction( to );
+		*/
+		// 3
+		return new WriteAction();
+	}
+}

@@ -1,0 +1,5 @@
+package com.exam.aop01.model;
+
+public interface Action {
+	
+}

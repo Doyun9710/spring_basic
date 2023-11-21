@@ -1,0 +1,29 @@
+package com.exam.di06.model;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+
+import com.exam.di06.model.BoardDAO;
+import com.exam.di06.model.WriteAction;
+
+public class BeanConfig {
+	
+	@Autowired
+	private BoardDAO dao;
+	
+	@Bean
+	public WriteAction writeAction1() {
+		return new WriteAction();
+	}
+	
+	@Bean
+	public WriteAction writeAction2() {
+		return new WriteAction( new BoardDAO() );
+	}
+	
+	@Bean
+	public WriteAction writeAction3() {
+		System.out.println( "dao : " + dao );
+		return new WriteAction();
+	}
+}

@@ -1,0 +1,5 @@
+package com.exam.di02.config;
+
+public interface Hello {
+
+}

@@ -1,0 +1,15 @@
+package com.exam.di05.config;
+
+import org.springframework.context.annotation.Bean;
+
+import com.exam.di05.model.HelloBean1;
+
+public class BeanConfig1 {
+
+	@Bean
+	//@Scope( value="prototype" )
+	public HelloBean1 helloBean1() {
+		return new HelloBean1();
+	}
+	
+}

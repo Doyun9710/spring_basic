@@ -1,0 +1,22 @@
+package com.exam.di02.config;
+
+import com.exam.di01.model.Hello;
+
+public class HelloBean implements Hello {
+
+	// 생성자 주입
+	private String name;
+	
+	public HelloBean() {
+		// TODO Auto-generated constructor stub
+		System.out.println( "HelloBean() 호출" );
+		this.name = name;
+	}
+	
+	@Override
+	public void sayHello(String name) {
+		// TODO Auto-generated method stub
+		System.out.println( name + "님 안녕하세요" );
+	}
+
+}

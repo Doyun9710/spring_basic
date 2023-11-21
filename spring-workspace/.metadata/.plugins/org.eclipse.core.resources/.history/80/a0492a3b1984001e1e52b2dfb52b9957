@@ -1,0 +1,11 @@
+package com.exam.aop01.model;
+
+public class WriteAction implements Action {
+
+	@Override
+	public void execute() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

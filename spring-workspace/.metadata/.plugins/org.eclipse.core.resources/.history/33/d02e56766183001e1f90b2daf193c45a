@@ -1,0 +1,32 @@
+package com.exam.di03.config;
+
+import org.springframework.context.annotation.Bean;
+
+import com.exam.di02.model.HelloBean;
+import com.exam.di03.model1.BoardTO;
+import com.exam.di03.model1.WriteAction;
+
+public class BeanConfig {
+	
+	public BoardTO boardTO() {
+		BoardTO to = new BoardTO();
+		to.setSeq( "1" );
+		to.setSubject( "Subject 1" );
+		return new to;
+	}
+	
+	@Bean
+	public WriteAction writeAction() {
+		/*
+		// 1
+		return new WriteAction( new BoardTO() );
+		
+		// 2
+		BoardTO to = new BoardTO();
+		return new WriteAction( to );
+		*/
+		// 3
+		return new WriteAction( boardTO() );
+	}
+	
+}
