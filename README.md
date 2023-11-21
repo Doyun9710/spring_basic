@@ -219,7 +219,7 @@ list1, list2 : Print Hello
 <br><br>
 
 
-### < WebEx02 >   
+### **< WebEx02 >**   
 < WebEx01 > 복습, artifactId = mvc02   
 servlet-context.xml : property name="prefix", "suffix" 옵션   
 (com.exam.mvc.model)
@@ -250,11 +250,50 @@ GugudanOkAction : modelAndview.addObject( "result", sbHtml.toString() );
 <br><br>
 
 
-### < BoardModel2Ex > -> < BoardEx01 > -> < BoardModel2Ex01 >   
+### <BoardModel2Ex > -> < BoardEx01 > -> < BoardModel2Ex01 >   
 model2 구조의 프로젝트를 Spring MVC Project로 변경하기   
+servlet-context.xml 다수 연결   
 
 
 <br><br>
+
+
+### < WebEx03 >   
+servlet-context.xml : xmlns:context, Controller 파일 자동 스캔   
+(com.exam.mvc.controller)   
+ConfigController : @Controller, @RequestMapping   
+
+
+<br><br>
+
+
+### < WebEx04 >   
+servlet-context.xml : xmlns:context, Controller 파일 자동 스캔   
+(com.exam.mvc.controller)   
+ConfigController : GET, POST 별 개별 호출 함수 설정   
+
+
+<br><br>
+
+
+### < WebEx04 >   
+(com.exam.mvc.controller)   
+ConfigController : Controller 방법 1 ~ 6   
+
+
+<br><br>
+
+
+### < ZipcodeEx02 >   
+< WebEx04 > 응용   
+(com.exam.mvc.controller)   
+ZipcodeController : ZipcodeAction + ZipcodeOkAction   
+ConfigServlet : servlet-context.xml -> Annotation 방식   
+
+web.xml : ConfigServlet 등록, <param-name>contextClass</param-name>   
+
+
+
 
 
 
