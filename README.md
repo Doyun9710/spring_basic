@@ -319,6 +319,51 @@ ListAction1, 2 : private ShareClass shareClass;
 servlet-context.xml : <property name="shareClass" ref="shareClass" />   
 
 
+<br><br>
+
+
+### < ShareClassEx022 >   
+<WebEx022 > 공유데이터 ShareClass + Annotation   
+
+
+<br><br>
+
+
+### < UploadEx01 >   
+이미지 전송 및 저장   
+
+
+<br><br>
+
+
+### **< PDSBoardEx01 >**   
+< PDSModel2Ex01 > + Annotation   
+
+
+<br><br>
+
+
+### **< UploadEx02 >**   
+pom.xml dependency   
+commons-fileupload https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload/1.5   
+commons-io https://mvnrepository.com/artifact/commons-io/commons-io/2.15.0   
+
+
+<br><br>
+
+
+### **< JDBCEx01 >**   
+pom.xml dependency   
+<artifactId>spring-jdbc</artifactId>   
+
+root-context.xml : JDBC 설정   
+
+
+
+
+
+
+
 
 <br>
 
