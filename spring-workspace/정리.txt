@@ -365,7 +365,7 @@ root-context.xml : JDBC 설정
 ### **< JDBCEx02 >**   
 JdbcTemplate   
 (com.exam.mvc.model)   
-DeptDAO : 자동 Getter, Setter   
+DeptDAO : 자동 Getter, Setter, 1행1열/1행다열/다행다열   
 DeptTO : Using Lombok   
 DeptMapper : implements RowMapper<DeptTO>   
 

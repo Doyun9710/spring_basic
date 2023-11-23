@@ -32,7 +32,8 @@ public class ConfigController {
 	public String jdbc2() {
 		
 		//dao.list1();
-		dao.list2();
+		//dao.list2();
+		dao.list3();
 		
 		return "jdbc";
 	}

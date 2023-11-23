@@ -1,5 +1,7 @@
 package com.exam.mvc.model;
 
+import java.util.List;
+
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +25,9 @@ public class JdbcDAO {
 	
 	// 1행 다열
 	public void list2() {
-		//DeptTO to = jdbcTemplate.queryForObject( "select deptno, dname, loc from dept where deptno=10", new BeanPropertyRowMapper<DeptTO>( DeptTO.class ) );
+		/*
+		DeptTO to = jdbcTemplate.queryForObject( "select deptno, dname, loc from dept where deptno=10", new BeanPropertyRowMapper<DeptTO>( DeptTO.class ) );
+		*/
 		/*
 		DeptTO to = jdbcTemplate.queryForObject( 
 				"select deptno, dname, loc from dept where deptno=?", 
@@ -47,6 +51,24 @@ public class JdbcDAO {
 		);
 		
 		System.out.println( to.toString() );
+	}
+	
+	// 다행 다열
+	public void list3() {
+		/*
+		List<DeptTO> lists = jdbcTemplate.query( 
+				"select deptno, dname, loc from dept", 
+				new BeanPropertyRowMapper<DeptTO>( DeptTO.class ) 
+		);
+		*/
+		List<DeptTO> lists = jdbcTemplate.query( 
+				"select deptno, dname, loc from dept", 
+				new DeptMapper() 
+		);
+		
+		for( DeptTO to : lists ) {
+			System.out.println( to.toString() );
+		}
 	}
 	
 }

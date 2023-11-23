@@ -17,7 +17,7 @@ public class DeptMapper implements RowMapper<DeptTO> {
 		to.setDname( rs.getString( "dname" ) );
 		to.setLoc( rs.getString( "loc" ) );
 		
-		return null;
+		return to;
 	}
 
 }
