@@ -60,7 +60,7 @@ public class BoardDAO {
 		);
 
 		to = jdbcTemplate.queryForObject( 
-				"select subject, writer, mail, wip, wdate, hit, content from board1 where seq=?", 
+				"select seq, subject, writer, mail, wip, wdate, hit, content from board1 where seq=?", 
 				new BeanPropertyRowMapper<BoardTO>( BoardTO.class ), 
 				to.getSeq() 
 		);
@@ -123,5 +123,5 @@ public class BoardDAO {
 		
 		return flag;
 	}
-	
+
 }

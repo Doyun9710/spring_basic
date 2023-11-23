@@ -6,11 +6,11 @@
 <% 
 	request.setCharacterEncoding( "utf-8" );
 
-	String seq = request.getParameter( "seq" );
+	//String seq = request.getParameter( "seq" );
 
 	BoardTO to = (BoardTO)request.getAttribute( "to" );
 
-	//String seq = to.getSeq();
+	String seq = to.getSeq();
 	String subject = to.getSubject();
 	String writer = to.getWriter();
 	String mail = to.getMail();
