@@ -1,12 +1,5 @@
 package com.exam.mvc.controller;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
-import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
@@ -19,6 +12,8 @@ public class ConfigController {
 
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
+	@Autowired
+	private JdbcDAO dao;
 
 	@RequestMapping( "/jdbc.do" )
 	public String jdbc() {
@@ -31,7 +26,14 @@ public class ConfigController {
 		System.out.println( "현재시간 : " + result );
 
 		return "jdbc";
-	}	
+	}
+	
+	@RequestMapping( "/jdbc2.do" )
+	public String jdbc2() {
+		dao.list1();
+		
+		return "jdbc";
+	}
 
 }
 

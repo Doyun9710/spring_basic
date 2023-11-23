@@ -10,6 +10,7 @@
 
 <ul>
 	<li><a href="./jdbc.do">jdbc.do</a></li>
+	<li><a href="./jdbc2.do">jdbc2.do</a></li>
 </ul>
 
 </body>
