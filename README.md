@@ -322,7 +322,7 @@ servlet-context.xml : <property name="shareClass" ref="shareClass" />
 <br><br>
 
 
-### < ShareClassEx022 >   
+### < ShareClassEx01 >   
 <WebEx022 > 공유데이터 ShareClass + Annotation   
 
 
@@ -337,7 +337,7 @@ servlet-context.xml : <property name="shareClass" ref="shareClass" />
 
 
 ### **< PDSBoardEx01 >**   
-< PDSModel2Ex01 > + Annotation   
+< PDSModel2Ex01 > File Upload + Annotation   
 
 
 <br><br>
@@ -359,7 +359,29 @@ pom.xml dependency
 root-context.xml : JDBC 설정   
 
 
+<br><br>
 
+
+### **< JDBCEx02 >**   
+JdbcTemplate   
+(com.exam.mvc.model)   
+DeptDAO : 자동 Getter, Setter, 1행1열/1행다열/다행다열   
+DeptTO : Using Lombok   
+DeptMapper : implements RowMapper<DeptTO>   
+
+
+<br><br>
+
+
+### **< JDBCEx03 >**   
+DML(INSERT, UPDATE, DELETE), DDL(CREATE TABLE)   
+
+
+<br><br>
+
+
+### **< ZipcodeEx03 >**   
+< ZipcodeEx02 > + JDBC   
 
 
 
