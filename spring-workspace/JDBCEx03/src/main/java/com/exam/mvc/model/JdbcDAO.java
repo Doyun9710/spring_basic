@@ -110,4 +110,42 @@ public class JdbcDAO {
 		}
 	}
 	
+	public void dml() {
+		// INSERT
+		/*
+		int result = jdbcTemplate.update( "insert into dept2 values ( 10, '연구부', '서울' )" );
+		*/
+		/*
+		int result = jdbcTemplate.update( 
+				"insert into dept2 values ( ?, ?, ? )", 
+				"51", "생산부", "서울" 
+		);
+		*/
+		
+		int result = jdbcTemplate.update( 
+				new PreparedStatementCreator() {
+					
+					@Override
+					public PreparedStatement createPreparedStatement(Connection con) throws SQLException {
+						// TODO Auto-generated method stub
+						String sql = "insert into dept2 values( ?, ?, ? )";
+						PreparedStatement pstmt = con.prepareStatement( sql );
+						pstmt.setString( 1, "52" );
+						pstmt.setString( 2, "개발부" );
+						pstmt.setString( 3, "서울" );
+						
+						return pstmt;
+					}
+				}
+		);
+		
+		System.out.println( "결과 : " + result );
+	}
+	
+	public void ddl() {
+		int result = jdbcTemplate.update( "create table tbl1 ( col1 varchar(10) )" );
+		
+		System.out.println( "결과 : " + result );
+	}
+	
 }
