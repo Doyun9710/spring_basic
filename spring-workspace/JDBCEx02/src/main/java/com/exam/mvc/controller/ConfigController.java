@@ -30,7 +30,9 @@ public class ConfigController {
 	
 	@RequestMapping( "/jdbc2.do" )
 	public String jdbc2() {
-		dao.list1();
+		
+		//dao.list1();
+		dao.list2();
 		
 		return "jdbc";
 	}
