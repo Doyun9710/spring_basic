@@ -33,7 +33,7 @@ public class Boot04Application implements CommandLineRunner {
 		
 		zipcodeApplication.searchDong( "신사" );
 		/*
-		List<ZipcodeTO> datas = dao.listZipcode( "신사" );
+		List<ZipcodeTO> datas = dao.searchZipcode( "신사" );
 		
 		for ( ZipcodeTO to : datas ) {
 			String zipcode = to.getZipcode();

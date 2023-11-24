@@ -14,7 +14,7 @@ public class ZipcodeDAO {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 
-	public List<ZipcodeTO> listZipcode(String strDong) {
+	public List<ZipcodeTO> searchZipcode(String strDong) {
 		/*
 		List<ZipcodeTO> lists = jdbcTemplate.query( 
 				"select zipcode, sido, gugun, dong, ri, bunji from zipcode where dong like ?", 

@@ -19,7 +19,7 @@ public class ZipcodeApplication {
 	public void searchDong(String strDong) {
 		System.out.println( "ZipcodeApplication 호출" );
 		
-		List<ZipcodeTO> datas = dao.listZipcode(strDong);
+		List<ZipcodeTO> datas = dao.searchZipcode(strDong);
 		
 		for ( ZipcodeTO to : datas ) {
 			String zipcode = to.getZipcode();
