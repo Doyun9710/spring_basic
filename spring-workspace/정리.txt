@@ -404,7 +404,7 @@ BoardModel2 + MyBatis
 
 
 ### < MyBatisEx02 >   
-
+< MyBatisEx01 > + Annotation
 
 
 
