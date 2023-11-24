@@ -390,7 +390,20 @@ DML(INSERT, UPDATE, DELETE), DDL(CREATE TABLE)
 ### < MyBatisEx01 >   
 maven - jdbc driver, Spring-jdbc, lombok, mybatis, mybatis-spring   
 (src/main.resources/mapper)   
-mapper.xml : 
+mapper.xml : SQL 등록   
+
+
+<br><br>
+
+
+### < BoardModel2Ex04 >   
+BoardModel2 + MyBatis   
+
+
+<br><br>
+
+
+### < MyBatisEx02 >   
 
 
 
