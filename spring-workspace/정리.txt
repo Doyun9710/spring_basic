@@ -407,6 +407,14 @@ BoardModel2 + MyBatis
 < MyBatisEx01 > + Annotation   
 
 
+<br><br>
+
+
+### < boot01 > JFrame 확인   
+### < boot02 > JDBC 확인   
+### < boot03 > MariaDB 연결 환경설정   
+HikariDataSource https://github.com/brettwooldridge/HikariCP   
+
 
 <br>
 
