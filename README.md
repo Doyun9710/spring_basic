@@ -384,6 +384,27 @@ DML(INSERT, UPDATE, DELETE), DDL(CREATE TABLE)
 < ZipcodeEx02 > + JDBC   
 
 
+<br><br>
+
+
+### < MyBatisEx01 >   
+maven - jdbc driver, Spring-jdbc, lombok, mybatis, mybatis-spring   
+(src/main.resources/mapper)   
+mapper.xml : SQL 등록   
+
+
+<br><br>
+
+
+### < BoardModel2Ex04 >   
+BoardModel2 + MyBatis   
+
+
+<br><br>
+
+
+### < MyBatisEx02 >   
+< MyBatisEx01 > + Annotation   
 
 
 
