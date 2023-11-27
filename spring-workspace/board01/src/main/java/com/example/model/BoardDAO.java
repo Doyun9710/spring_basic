@@ -22,7 +22,6 @@ public class BoardDAO {
 		ArrayList<BoardTO> datas = (ArrayList<BoardTO>) jdbcTemplate.query( 
 				"select seq, subject, writer, date_format(wdate, '%Y-%m-%d') wdate, hit, datediff(now(), wdate) wgap from board1 order by seq desc", 
 				new BeanPropertyRowMapper<BoardTO>( BoardTO.class ) 
-				//new BoardMapper() 
 		);
 		
 		return datas;
