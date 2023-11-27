@@ -8,13 +8,11 @@
 </head>
 <body>
 
-<%
-	out.println( "form_ok.jsp" );
-%>
+gugudan_ok.jsp
 
-<br /><hr /><br />
+<br /><br />
 
-data : <%= (String)request.getAttribute( "data" ) %>
+<%= (String)request.getAttribute( "result" ) %>
 
 </body>
 </html>

@@ -449,7 +449,7 @@ Spring Boot + MyBatis + Annotation Mapper.java
 
 
 ### < boot06 >   
-(src./main/java)   
+(src/main/java)   
 DatabaseConfiguration : mapper Session 환경 설정   
 
 
@@ -469,8 +469,15 @@ application.properties : JSP 폴더 경로, 파일 형식 설정
 ### < web02 >   
 form.do -> form.jsp   
 form_ok.do -> form_ok.jsp   
+(com.example.config)   
+ConfigController : URL Listener 설정   
 
 
+<br><br>
+
+
+### < gugudan01 >   
+< GugudanModel2Ex02 > + Spring Boot + Controller   
 
 
 

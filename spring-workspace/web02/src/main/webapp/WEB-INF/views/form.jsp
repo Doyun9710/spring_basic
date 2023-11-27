@@ -12,5 +12,12 @@
 	out.println( "form.jsp" );
 %>
 
+<br /><hr /><br />
+
+<form action="form_ok.do" method="post">
+데이터 <input type="text" name="data" />
+<input type="submit" value="전송" />
+</form>
+
 </body>
 </html>
