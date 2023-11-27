@@ -492,7 +492,17 @@ application.properties : JSP + MariaDB 설정
 
 
 ### < board01 >   
-< BoardModel2Ex03 > + Spring Boot   
+< BoardModel2Ex03 > + Spring Boot + JDBC API(JdbcTemplate)   
+
+
+<br><br>
+
+
+### < mybatis01 >   
+< boot05 > + .jsp 연결   
+
+
+
 
 
 
