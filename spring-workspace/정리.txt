@@ -480,6 +480,13 @@ ConfigController : URL Listener 설정
 < GugudanModel2Ex02 > + Spring Boot + Controller   
 
 
+<br><br>
+
+
+### < jdbc01 >   
+pom.xml : JSP 파일 환경 설정   
+application.properties : JSP + MariaDB 설정   
+
 
 
 

@@ -18,7 +18,7 @@ import com.exam.mvc.model.BoardDAO;
 import com.exam.mvc.model.BoardTO;
 
 @Controller
-@RequestMapping( "/board" )
+//@RequestMapping( "/board" )
 public class BoardController {
 	
 	// 새로운 Controller File 생성 시 ERROR
@@ -55,14 +55,6 @@ public class BoardController {
 	@RequestMapping( "/write.do" )
 	public String board_write(HttpServletRequest request, Model model) {
 		System.out.println( "board_write() 호출" );
-		
-		BoardTO to = new BoardTO();
-		to.setSeq( request.getParameter( "seq" ) );
-		
-		BoardDAO dao = new BoardDAO();
-		to = dao.boardView( to );
-		
-		model.addAttribute( "to", to );
 
 		return "board_write1";
 	}
