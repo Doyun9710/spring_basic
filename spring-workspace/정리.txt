@@ -442,11 +442,33 @@ mapper.xml : select문 등록
 
 ### < ZipcodeEx04 >   
 Zipcode 검색기   
-Spring Boot + MyBatis + Annotation Mapper   
+Spring Boot + MyBatis + Annotation Mapper.java   
 
 
+<br><br>
 
 
+### < boot06 >   
+(src./main/java)   
+DatabaseConfiguration : mapper Session 환경 설정   
+
+
+<br><br>
+
+
+### < web01 >   
+pom.xml : JSP dependency 추가   
+application.properties : JSP 폴더 경로, 파일 형식 설정   
+(src/main/resources)   
+(static) : 고정된 파일(html)만 가능, .jsp 파일 불가능   
+
+
+<br><br>
+
+
+### < web02 >   
+form.do -> form.jsp   
+form_ok.do -> form_ok.jsp   
 
 
 

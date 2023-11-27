@@ -9,7 +9,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.example.mapper.SqlMapperInter;
+import com.example.mapper.ZipcodeMapperInter;
 
 @Repository
 @MapperScan( basePackages = { "com.example.mapper" } )
@@ -18,7 +18,7 @@ public class ZipcodeDAO {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	@Autowired
-	private SqlMapperInter mapper;
+	private ZipcodeMapperInter mapper;
 
 	public List<ZipcodeTO> listZipcode(String strDong) {
 		System.out.println( "ZipcodeDAO() listZipcode() 호출" );
