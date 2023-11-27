@@ -437,10 +437,69 @@ Zipcode 검색기
 mapper.xml : select문 등록   
 
 
+<br><br>
 
 
+### < ZipcodeEx04 >   
+Zipcode 검색기   
+Spring Boot + MyBatis + Annotation Mapper.java   
 
 
+<br><br>
+
+
+### < boot06 >   
+(src/main/java)   
+DatabaseConfiguration : mapper Session 환경 설정   
+
+
+<br><br>
+
+
+### < web01 >   
+pom.xml : JSP dependency 추가   
+application.properties : JSP 폴더 경로, 파일 형식 설정   
+(src/main/resources)   
+(static) : 고정된 파일(html)만 가능, .jsp 파일 불가능   
+
+
+<br><br>
+
+
+### < web02 >   
+form.do -> form.jsp   
+form_ok.do -> form_ok.jsp   
+(com.example.config)   
+ConfigController : URL Listener 설정   
+
+
+<br><br>
+
+
+### < gugudan01 >   
+< GugudanModel2Ex02 > + Spring Boot + Controller   
+
+
+<br><br>
+
+
+### < jdbc01 >   
+pom.xml : JSP 파일 환경 설정   
+application.properties : JSP + MariaDB 설정   
+
+
+<br><br>
+
+
+### < board01 >   
+< BoardModel2Ex03 > + Spring Boot + JDBC API(JdbcTemplate)   
+
+
+<br><br>
+
+
+### < mybatis01 >   
+< boot05 > + .jsp 연결   
 
 
 
