@@ -143,19 +143,13 @@ public class ConfigController {
 	/*
 	// return ModelAndView Type
 	@RequestMapping( "/list.do" )
-	public ModelAndView board_list(HttpServletRequest request, HttpServletResponse response) {
-		System.out.println( "ModelAndView board_list() 호출" );
+	public ModelAndView list() {
 		
-		dao = new BoardDAO();
 		ArrayList<BoardTO> datas = dao.boardList();
-
-		//request.setAttribute( "datas", datas );
-		
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName( "board_list1" );
 		modelAndView.addObject( "datas", datas );
-		
-		//return new ModelAndView( "list1" );
+	
 		return modelAndView;
 	}
 	
@@ -165,8 +159,7 @@ public class ConfigController {
 		
 		BoardTO to = new BoardTO();
 		to.setSeq( request.getParameter( "seq" ) );
-		
-		dao = new BoardDAO();
+
 		to = dao.boardView( to );
 		
 		//request.setAttribute( "to", to );
@@ -181,19 +174,7 @@ public class ConfigController {
 	@RequestMapping( "/write.do" )
 	public ModelAndView board_write(HttpServletRequest request, HttpServletResponse response) {
 		System.out.println( "ModelAndView board_write() 호출" );
-		
-		BoardTO to = new BoardTO();
-		to.setSeq( request.getParameter( "seq" ) );
-		
-		dao = new BoardDAO();
-		to = dao.boardView( to );
-		
-		//request.setAttribute( "to", to );
-		
-		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName( "board_view1" );
-		modelAndView.addObject( "to", to );
-		
+
 		return new ModelAndView( "board_write1" );
 	}
 	
@@ -211,9 +192,7 @@ public class ConfigController {
 		to.setPassword( request.getParameter( "password" ) );
 		to.setContent( request.getParameter( "content" ) );
 		to.setWip( request.getRemoteAddr() );
-		
-		
-		dao = new BoardDAO();
+
 		int flag = dao.boardWriteOk( to );
 		
 		//request.setAttribute( "flag", flag );
@@ -231,8 +210,7 @@ public class ConfigController {
 		
 		BoardTO to = new BoardTO();
 		to.setSeq( request.getParameter( "seq" ) );
-		
-		dao = new BoardDAO();
+
 		to = dao.boardModify( to );
 		
 		//request.setAttribute( "to", to );
@@ -259,8 +237,7 @@ public class ConfigController {
 		}
 
 		to.setContent( request.getParameter( "content" ) );
-		
-		dao = new BoardDAO();
+
 		int flag = dao.boardModifyOk( to );
 		
 		//request.setAttribute( "flag", flag );
@@ -281,7 +258,6 @@ public class ConfigController {
 		BoardTO to = new BoardTO();
 		to.setSeq( request.getParameter( "seq" ) );
 
-		dao = new BoardDAO();
 		to = dao.boardDelete( to );
 		
 		//request.setAttribute( "to", to );
@@ -300,8 +276,7 @@ public class ConfigController {
 		BoardTO to = new BoardTO();
 		to.setSeq( request.getParameter( "seq" ) );
 		to.setPassword( request.getParameter( "password" ) );
-		
-		dao = new BoardDAO();
+
 		int flag = dao.boardDeleteOk( to );
 		
 		//request.setAttribute( "flag", flag );

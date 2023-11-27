@@ -488,6 +488,12 @@ pom.xml : JSP 파일 환경 설정
 application.properties : JSP + MariaDB 설정   
 
 
+<br><br>
+
+
+### < board01 >   
+< BoardModel2Ex03 > + Spring Boot   
+
 
 
 

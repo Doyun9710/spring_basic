@@ -19,8 +19,9 @@ public class BoardDAO {
 	
 	public ArrayList<BoardTO> boardList() {
 
+		String sql = "select seq, subject, writer, date_format(wdate, '%Y-%m-%d') wdate, hit, datediff(now(), wdate) wgap from board1 order by seq desc";
 		ArrayList<BoardTO> datas = (ArrayList<BoardTO>) jdbcTemplate.query( 
-				"select seq, subject, writer, date_format(wdate, '%Y-%m-%d') wdate, hit, datediff(now(), wdate) wgap from board1 order by seq desc", 
+				sql, 
 				new BeanPropertyRowMapper<BoardTO>( BoardTO.class ) 
 		);
 		
