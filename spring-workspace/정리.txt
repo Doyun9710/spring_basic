@@ -502,6 +502,17 @@ application.properties : JSP + MariaDB 설정
 < boot05 > + .jsp 연결   
 
 
+<br><br>
+
+
+### < upload01 >   
+파일업로드
+중복 이름 파일 처리 -> 파일명.확장자 -> 파일명_타임스탬프.확장자
+파일별 디렉토리 분류 -> 이미지(/images), 기타(uploads)   
+ConfigController : 
+FileRenamePolicy : 
+
+form.jsp : 다중 파일 선택 옵션 multiple="multiple"   
 
 
 
