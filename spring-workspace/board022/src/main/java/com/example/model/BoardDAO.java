@@ -176,7 +176,7 @@ public class BoardDAO {
 			flag = 0;
 			
 			// 구형 파일 존재 시 삭제
-			//if( newfilename != null && oldfilename != null ) {
+//			if( newfilename != null && oldfilename != null ) {
 			if( !to.getFilename().equals( "" ) ) {
 				File file = new File( uploadPath, oldfilename );
 				file.delete();

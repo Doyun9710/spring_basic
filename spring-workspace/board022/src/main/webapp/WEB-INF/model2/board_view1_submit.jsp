@@ -42,6 +42,28 @@
 		//file = "<a href='../../upload/" + filename + "'>(" + filesize + "Kbyte)";
 		file = "<a href='./download.jsp?filename=" + filename + "'>" + filename + "(" + filesize + "Kbyte)";
 	}
+
+	StringBuilder sbHtml = new StringBuilder();
+	ArrayList<CommentTO> boardReplyLists = (ArrayList)request.getAttribute( "boardReplyLists" );
+	int passcheck = boardReplyLists.size();
+	int count = 1;
+	for( CommentTO rto : boardReplyLists ) {
+		if( count++ == passcheck ) continue; 	// 최신댓글 맨위 추가 model1.BoardDAO.boardReplyList() order by seq desc
+		//if( count++ == 1 ) continue;			// 최신댓글 아래 추가 model1.BoardDAO.boardReplyList() order by seq asc
+		
+		String cwriter = rto.getWriter();
+		String ccontent = rto.getContent();
+		String cdate = rto.getWdate();
+
+		sbHtml.append( "<tr>" );
+		sbHtml.append( "<td class='coment_re' width='20%'>" );
+		sbHtml.append( "<strong>" + cwriter + "</strong> (" + cdate + ")" );
+		sbHtml.append( "<div class='coment_re_txt'>" );
+		sbHtml.append( ccontent );
+		sbHtml.append( "</div>" );
+		sbHtml.append( "</td>" );
+		sbHtml.append( "</tr>" );
+	}
 %>
 
 <!DOCTYPE html>
@@ -52,74 +74,24 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="./css/board_view.css">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 <script type="text/javascript">
-	$( document ).ready( function() {
-		$( '#cbtn' ).on( 'click', function() {
-			// 답글목록 comment_list.do, return JSON
-			// 답글쓰기 comment_write_ok.do, return flag
-			let cwriter = $('#cwriter').val();
-		    let cpassword = $('#cpassword').val();
-		    let ccontent = $('#ccontent').val();
-			writeComment(cwriter, cpassword, ccontent);
-		});
-		
-		readComment();
-	});
-	const readComment = function() {
-		$.ajax({
-			url: './comment_list.do',
-			type: 'get',
-			data: {
-				pseq: <%= seq %>
-			},
-			dataType: 'json',
-			success: function( json ) {
-				console.log( json );
-				let sbHtml = "";
-				$.each( json.data, function(index, cmt) {
-					sbHtml += "<tr>" ;
-					sbHtml += "<td class='coment_re' width='20%'>";
-					sbHtml += "<strong>" + cmt.writer + "</strong> (" + cmt.wdate + ")";
-					sbHtml += "<div class='coment_re_txt'>" + cmt.content + "</div>";
-					sbHtml += "</td>";
-					sbHtml += "</tr>";
-				});
-				
-				$( '#result' ).html( sbHtml );
-			},
-			error: function() {
-				console.log( '[에러]' );
+	window.onload = function() {
+		document.getElementById( 'cbtn' ).onclick = function() {
+			if( document.cfrm.cwriter.value.trim() == '' ) {
+				alert( '글쓴이를 입력하셔야 합니다' );
+				return;
 			}
-		});
-	};
-	const writeComment = function(cwriter, cpassword, ccontent) {
-		$.ajax({
-			url: './comment_write_ok.do',
-			type: 'get',
-			data: {
-				pseq: $('#pseq').val(),
-				cwriter: cwriter,
-				cpassword: cpassword,
-				ccontent: ccontent
-			},
-			dataType: 'json',
-			success: function( json ) {
-				if( json.flag == 0 ) {
-					document.getElementById('cwriter').value = '';
-					document.getElementById('cpassword').value = '';
-					document.getElementById('ccontent').value = '';
-					readComment();
-					// location.reload();
-				}
-				else
-					console.log( '[에러]' );
-			},
-			error: function() {
-				console.log( '[에러]' );
+			if( document.cfrm.cpassword.value.trim() == '' ) {
+				alert( '비밀번호를 입력하셔야 합니다' );
+				return;
 			}
-		});
-	};
+			if( document.cfrm.ccontent.value.trim() == '' ) {
+				alert( '내용을 입력하셔야 합니다' );
+				return;
+			}
+			document.cfrm.submit();
+		}
+	}
 </script>
 </head>
 
@@ -174,30 +146,31 @@
 			</tr>			
 			</table>
 			
-			<table id="result">
+			<table>
+<%= sbHtml %>
 			</table>
 
-			<!-- <form action="comment_write_ok.do" method="post" name="cfrm"> -->
-			<input type="hidden" id="cpage" value="<%= cpage %>" />
-			<input type="hidden" id="pseq" value="<%= seq %>" />
+			<form action="comment_write_ok.do" method="post" name="cfrm">
+			<input type="hidden" name="cpage" value="<%= cpage %>" />
+			<input type="hidden" name="pseq" value="<%= seq %>" />
 			<table>
 			<tr>
 				<td width="94%" class="coment_re">
-					글쓴이 <input type="text" id="cwriter" maxlength="5" class="coment_input" />&nbsp;&nbsp;
-					비밀번호 <input type="password" id="cpassword" class="coment_input pR10" />&nbsp;&nbsp;
+					글쓴이 <input type="text" name="cwriter" maxlength="5" class="coment_input" />&nbsp;&nbsp;
+					비밀번호 <input type="password" name="cpassword" class="coment_input pR10" />&nbsp;&nbsp;
 				</td>
 				<td width="6%" class="bg01"></td>
 			</tr>
 			<tr>
 				<td class="bg01">
-					<textarea id="ccontent" cols="" rows="" class="coment_input_text"></textarea>
+					<textarea name="ccontent" cols="" rows="" class="coment_input_text"></textarea>
 				</td>
 				<td align="right" class="bg01">
 					<input type="button" id="cbtn" value="댓글등록" class="btn_re btn_txt01" />
 				</td>
 			</tr>
 			</table>
-			<!-- </form> -->
+			</form>
 		</div>
 		<div class="btn_area">
 			<div class="align_left">

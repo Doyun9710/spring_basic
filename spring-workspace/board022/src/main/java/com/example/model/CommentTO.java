@@ -11,14 +11,16 @@ import lombok.ToString;
 @ToString
 public class CommentTO {
 	private String seq;
+	private String pseq;
+	
 	private int grp;
 	private int grps;
 	private int grpl;
 	
-	private String cwriter;
-	private String cpassword;
-	private String ccontent;
-	private String cdate;
+	private String writer;
+	private String password;
+	private String content;
+	private String wdate;
 	
 	private ArrayList<CommentTO> boardReplyLists;
 }

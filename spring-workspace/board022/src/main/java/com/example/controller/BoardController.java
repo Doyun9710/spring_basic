@@ -38,12 +38,12 @@ public class BoardController {
 		BoardListTO listTO = new BoardListTO();
 		listTO.setCpage( cpage );
 		listTO = dao.boardList( listTO );
-		//ArrayList<BoardTO> boardLists = listTO.getBoardLists();
+//		ArrayList<BoardTO> boardLists = listTO.getBoardLists();
 		
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName( "board_list1" );
 		model.addAttribute( "listTO", listTO );
-		//model.addAttribute( "boardLists", boardLists );
+//		model.addAttribute( "boardLists", boardLists );
 		
 		return modelAndView;
 	}
@@ -53,16 +53,16 @@ public class BoardController {
 		BoardTO to = new BoardTO();
 		to.setSeq( request.getParameter( "seq" ) );
 		to = dao.boardView( to );
-		
-		CommentTO listRTO = new CommentTO();
-		listRTO.setSeq( request.getParameter( "seq" ) );
-		listRTO = commentdao.boardReplyList( listRTO );
-		ArrayList<CommentTO> boardReplyLists = listRTO.getBoardReplyLists();
-		
+/*
+		// CommentController
+		CommentTO cto = new CommentTO();
+		cto.setPseq( request.getParameter( "seq" ) );
+//		ArrayList<CommentTO> boardReplyLists = commentdao.boardCommentList( cto );
+*/
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName( "board_view1" );
 		model.addAttribute( "to", to );
-		model.addAttribute( "boardReplyLists", boardReplyLists );
+//		model.addAttribute( "boardReplyLists", boardReplyLists );
 
 		return modelAndView;
 	}
@@ -88,7 +88,7 @@ public class BoardController {
 			if( !upload.isEmpty() )
 				upload.transferTo( new File( uploadPath, newFilename ) );
 		} catch (IllegalStateException | IOException e) {
-			System.out.println( "[에러] Controller-write_ok | 파일 이름 중복 방지" );
+			System.out.println( "[에러] BoardController-write_ok | 파일 이름 중복 방지" );
 			e.printStackTrace();
 		}
 		
@@ -144,7 +144,7 @@ public class BoardController {
 			if( !upload.isEmpty() )
 				upload.transferTo( new File( uploadPath, newFilename ) );
 		} catch (IllegalStateException | IOException e) {
-			System.out.println( "[에러] Controller-write_ok | 파일 이름 중복 방지" );
+			System.out.println( "[에러] BoardController-modify_ok | 파일 이름 중복 방지" );
 			e.printStackTrace();
 		}
 
@@ -158,7 +158,6 @@ public class BoardController {
 		if( !request.getParameter( "mail1" ).equals( "" ) && !request.getParameter( "mail2" ).equals( "" ) )
 			to.setMail( request.getParameter( "mail1" ) + "@" + request.getParameter( "mail2" ) );
 		to.setContent( request.getParameter( "content" ) );
-//		String oldfilename = request.getParameter( "filename_org" );
 		if( !upload.isEmpty() ) to.setFilename( newFilename );
 		else to.setFilename( "" );
 		to.setFilesize( 0 );
@@ -203,5 +202,5 @@ public class BoardController {
 
 		return modelAndView;
 	}
-	
+
 }

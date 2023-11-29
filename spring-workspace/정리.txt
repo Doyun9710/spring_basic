@@ -538,12 +538,12 @@ BoardDAO() boardReplyOk() ???
 
 
 ### < board022 >   
-AlbumBoard + ModelAndView + JDBCTemplate + Mail   
+AlbumBoard + ModelAndView + JDBCTemplate + Mail + JQuery(ajax)   
 +++   
 --list 행 SKIP--   
 view 이전글, 다음글   
 --write_ok 중복파일 이름 설정--   
-BoardDAO() boardReplyOk() ???  
+--BoardDAO() boardReplyOk()--  
 
 <br><br>
 
