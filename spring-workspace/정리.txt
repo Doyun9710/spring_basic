@@ -526,11 +526,31 @@ form.jsp : 다중 파일 선택 옵션 multiple="multiple"
 
 
 ### < board02 >   
+AlbumBoard + JDBCTemplate + Mail   
 +++   
 --list 행 SKIP--   
---view 이전글, 다음글--   
+view 이전글, 다음글   
 write_ok 중복파일 이름 설정   
 BoardDAO() boardReplyOk() ???   
+
+
+<br><br>
+
+
+### < board022 >   
+AlbumBoard + ModelAndView + JDBCTemplate + Mail   
++++   
+--list 행 SKIP--   
+view 이전글, 다음글   
+--write_ok 중복파일 이름 설정--   
+BoardDAO() boardReplyOk() ???  
+
+<br><br>
+
+
+### < board03 >   
+AlbumBoard + ModelAndView + MyBatis + Mail   
++++   
 
 
 
