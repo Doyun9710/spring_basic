@@ -561,7 +561,31 @@ pom.xml : Thymeleaf 추가
 application.properties : Thymeleaf 설정   
 
 (static/templates)   
+참고 https://www.thymeleaf.org/doc/tutorials/3.1/usingthymeleaf.html   
 view2 : Thymeleaf 문법 적용   
+view3 : 삼항연산자, if/unless   
+view4 : request 받기   
+view5 : TO 데이터 받기   
+view6 : ArrayList<TO> Table 출력   
+
+
+<br><br>
+
+
+### < thymeleafBoard01 >   
+board01 + Thymeleaf(HTML)   
+list, view, write, write_ok 구현    
+board_write1_ok.html은 코드 오류 아님!   
+
+
+
+
+
+
+
+
+
+
 
 
 

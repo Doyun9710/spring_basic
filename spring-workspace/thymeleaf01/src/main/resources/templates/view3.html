@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+view3.html
+
+<br /><hr /><br />
+
+<!-- <div th:with="data = ${ '' }"> -->
+<div th:with="data = ${ '값' }">
+	<h3 th:text="${ data == '' ? '빈값' : '값' }"></h3>
+	<h3 th:text="${ data eq '' ? '빈값' : '값' }"></h3>
+	<h3 th:text="${ data } ? '값' : '빈값'"></h3>
+</div>
+
+<br /><hr /><br />
+
+<div th:with="data = ${ '' }">
+	<h3 th:if="${ data == '' }" th:text="빈값"></h3>
+	<h3 th:unless="${ data == '' }" th:text="값"></h3>
+</div>
+
+<br /><hr /><br />
+
+<div th:switch="10">
+	<h3 th:case = "10">10살</h3>
+	<h3 th:case = "20">20살</h3>
+	<h3 th:case = "*">기타</h3>
+</div>
+
+</body>
+</html>
