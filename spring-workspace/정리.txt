@@ -541,17 +541,27 @@ BoardDAO() boardReplyOk() ???
 AlbumBoard + ModelAndView + JDBCTemplate + Mail + JQuery(ajax)   
 +++   
 --list 행 SKIP--   
-view 이전글, 다음글   
+--view 이전글, 다음글--   
 --write_ok 중복파일 이름 설정--   
 --BoardDAO() boardReplyOk()--  
+
 
 <br><br>
 
 
 ### < board03 >   
-AlbumBoard + ModelAndView + MyBatis + Mail   
-+++   
+AlbumBoard + ModelAndView + MyBatis + Mail + JQuery(ajax)    
 
+
+<br><br>
+
+
+### < thymeleaf01 >   
+pom.xml : Thymeleaf 추가   
+application.properties : Thymeleaf 설정   
+
+(static/templates)   
+view2 : Thymeleaf 문법 적용   
 
 
 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- th == th(ymeleaf), th != <th> -->
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+view2.html
+
+<br /><hr /><br />
+
+<h3>Hello Thymeleaf</h3>
+<!-- th:text="단어하나만가능" -->
+<h3 th:text="안녕">Hello Thymeleaf</h3>
+
+<br /><hr /><br />
+
+<div th:with="data=${ '값' }">
+	<h3 th:text="${ data }"></h3>
+</div>
+
+<br /><hr /><br />
+
+<div th:with="data1=${ '값1' }, data2=${ '값2' }">
+	<h3 th:text="${ data1 }"></h3>
+	<h3 th:text="${ data2 }"></h3>
+</div>
+
+</body>
+</html>
