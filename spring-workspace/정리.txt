@@ -1,4 +1,4 @@
-# spring_basic
+
 
 
 <br><br>
@@ -585,6 +585,14 @@ board_write1_ok.html은 코드 오류 아님!
 /target/   
 Project -> Run As -> Maven Build -> Goals : package ->   
 thymeleafBoard02-0.0.1-SNAPSHOT.jar 생성   
+
+
+<br><br>
+
+
+### <  >   
+
+
 
 
 
