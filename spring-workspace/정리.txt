@@ -578,6 +578,14 @@ list, view, write, write_ok 구현
 board_write1_ok.html은 코드 오류 아님!   
 
 
+<br><br>
+
+
+### < thymeleafBoard02 >   
+/target/   
+Project -> Run As -> Maven Build -> Goals : package ->   
+thymeleafBoard02-0.0.1-SNAPSHOT.jar 생성   
+
 
 
 

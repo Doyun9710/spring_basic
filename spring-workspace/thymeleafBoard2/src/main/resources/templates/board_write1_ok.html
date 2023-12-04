@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script th:inline="javascript">
+   	var flag = [[${ flag }]];
+
+    if (flag === 0) {
+        alert('글쓰기 성공');
+        location.href = './list.do';
+    } else if (flag === 1) {
+        alert('글쓰기 실패');
+        history.back();
+    }
+</script>
+</head>
+<body>
+
+</body>
+</html>
