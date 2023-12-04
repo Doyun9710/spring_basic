@@ -1,4 +1,4 @@
-# spring_basic
+
 
 
 <br><br>
@@ -500,6 +500,105 @@ application.properties : JSP + MariaDB 설정
 
 ### < mybatis01 >   
 < boot05 > + .jsp 연결   
+
+
+<br><br>
+
+
+### < upload01 >   
+파일업로드   
+중복 이름 파일 처리 -> 파일명.확장자 -> 파일명_타임스탬프.확장자   
+파일별 디렉토리 분류 -> 이미지(/images), 기타(uploads)   
+ConfigController : 다중 파일 처리   
+FileRenamePolicy : 파일이름_타임스탬프.확장자   
+
+form.jsp : 다중 파일 선택 옵션 multiple="multiple"   
+
+
+<br><br>
+
+
+### < mail01 >   
+보안 -> 앱 비밀번호 : xxxx xxxx xxxx xxxx   
+
+
+<br><br>
+
+
+### < board02 >   
+AlbumBoard + JDBCTemplate + Mail   
++++   
+--list 행 SKIP--   
+view 이전글, 다음글   
+write_ok 중복파일 이름 설정   
+BoardDAO() boardReplyOk() ???   
+
+
+<br><br>
+
+
+### < board022 >   
+AlbumBoard + ModelAndView + JDBCTemplate + Mail + JQuery(ajax)   
++++   
+--list 행 SKIP--   
+--view 이전글, 다음글--   
+--write_ok 중복파일 이름 설정--   
+--BoardDAO() boardReplyOk()--  
+
+
+<br><br>
+
+
+### < board03 >   
+AlbumBoard + ModelAndView + MyBatis + Mail + JQuery(ajax)    
+
+
+<br><br>
+
+
+### < thymeleaf01 >   
+pom.xml : Thymeleaf 추가   
+application.properties : Thymeleaf 설정   
+
+(static/templates)   
+참고 https://www.thymeleaf.org/doc/tutorials/3.1/usingthymeleaf.html   
+view2 : Thymeleaf 문법 적용   
+view3 : 삼항연산자, if/unless   
+view4 : request 받기   
+view5 : TO 데이터 받기   
+view6 : ArrayList<TO> Table 출력   
+
+
+<br><br>
+
+
+### < thymeleafBoard01 >   
+board01 + Thymeleaf(HTML)   
+list, view, write, write_ok 구현    
+board_write1_ok.html은 코드 오류 아님!   
+
+
+<br><br>
+
+
+### < thymeleafBoard02 >   
+/target/   
+Project -> Run As -> Maven Build -> Goals : package ->   
+thymeleafBoard02-0.0.1-SNAPSHOT.jar 생성   
+
+![thymeleafBoard02 Maven Build 스크린샷](https://github.com/Doyun9710/spring_basic/assets/116128876/0ac7dccb-19ec-408f-8185-8b605b0727b1)
+
+
+<br><br>
+
+
+### <  >   
+
+
+
+
+
+
 
 
 
